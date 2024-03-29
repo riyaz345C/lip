@@ -1,0 +1,58 @@
+.test-card{
+    display: flex;flex-flow: column;
+    align-items: center;
+    box-shadow: 0px 0px  6px 0 #c0bfbfea;
+    border: 1px solid #ccc;
+    height: fit-content;
+    gap: 10px;
+}
+.test-card :is(h2,p)    {
+    margin: 0;
+}
+.test-card{
+    min-width: 60vw;
+    padding: 20px 20px ;
+    transition: transform .5s ease-in-out;
+}
+.test-card *{
+    width: 70%;
+}
+.test-card img{
+    width: 70%;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+}
+.customer-info  h2{
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+.customer-info p{
+    color: #898989;
+    font-size: 13px;
+}
+.customer-message{
+    margin-top: 30px;
+    color: #898989;
+    font-size: 13px;
+    
+}
+@media screen and (min-width:800px) {
+    .test-card{
+        display: grid;
+        grid-template-columns: auto 1fr;
+        column-gap: 30px;
+        max-width: 45%;
+        min-width: 45%;
+    }
+    .test-card img{
+        width: 120px;
+    }
+    .test-card *{
+        width: 100%;
+    }
+    .customer-message{
+        grid-column: 1/3;
+        width: 100%;
+    }
+    
+}

@@ -1,0 +1,203 @@
+.lip-navbar{
+    display: flex;
+    align-items: center; 
+    justify-content: space-around;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: 80px;
+    background-color: #fffffff6;
+    backdrop-filter: blur(9px);
+}
+.lip-navbar img:first-child{
+    width: clamp(100px,50%,200px);
+    object-fit: contain;
+    height: 100%;
+    /* border: 1px solid #000; */
+}
+.lip-navbar .icon{
+    display: none;
+    height: clamp(25px,35px,50px);
+    cursor: pointer;
+}
+
+
+.sidebar{
+    position: fixed;
+    background-color: #ffffff7e;
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    transition: all .5s linear;
+    overflow: hidden;
+    z-index: 10000;
+ }
+ .sidebar li{
+     font-size: medium;
+     list-style: none;
+     font-size: 20px;
+     border-bottom: 1px solid #ddd;
+     padding: 15px 0;
+     width: 100%;
+     text-align: center;
+     cursor: pointer;
+     z-index: 100;
+ }
+ .close{
+     height: 0;
+ }
+ .open{
+     height: 50%;    
+ }
+
+/* navbar ends here */
+/* .hero-img-container{
+    height: fit-content;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    z-index: -1;
+} */ /*#*/
+
+/*.hero-img-container::before {
+    content: ""; /* Add a pseudo-element */
+    /*background-color: #00000071; /* Set your desired background color */
+    /*position: absolute; /* Position the pseudo-element absolutely relative to the container */
+    /*top: 0;
+    /*left: 0;
+    /*width: 100%; /* Cover the entire width of the container */
+    /*height: 100%; /* Cover the entire height of the container */
+    /*z-index: 1; /* Place the pseudo-element behind the image */
+/* } */
+
+/* position: absolute; */
+/* .hero-img{
+    position: relative;
+    z-index: -1;
+    width: 100%;    
+    height: calc(100vh - 80px);
+    object-fit: cover;
+    background-color: #fff;
+}
+
+.hero-content{
+    background-image: linear-gradient(to top,#0000008a,#00000000);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+}
+.hero-content h1{
+    margin: 0;
+    font-size: 55px;
+    color: #fff;
+}
+.hero-content h1:first-child{
+    font-weight: bold;
+}
+.hero-content h1:nth-child(2){
+    font-weight: lighter;
+} */ 
+/* # hero section ends here============================================ */
+
+/* .lip-section-1,.lip-section-2{
+    padding: 40px 25px 80px ;
+    display: flex;
+    flex-flow: column;
+    gap: 30px;
+}
+.lip-section-1 h1,.lip-section-2 h1{
+    font-size: 30px;
+    margin: 0 auto;
+    width: max-content;
+}
+.lip-section-1 h1 span,.lip-section-2 h1 span{
+    color: #8c241d;
+    border-bottom: 4px solid #8c241d;
+}
+.map{
+    display: flex;
+    justify-content: center ;
+    gap: 30px;  
+}
+.map-btn{
+    display: flex;
+    flex-flow: column;
+    flex-wrap: wrap;
+    box-shadow: 0px 1px 5px 0px #bdbebf;
+    padding: 10px;
+}
+@media screen and (max-width:800px) {
+    .map{
+        flex-flow: column;
+        gap: 10px;
+    }
+    .map img{
+        width: 100% !important;
+    }
+}
+.map-btn button{
+    text-align: start;
+    cursor: pointer;
+    border: none;
+    padding: 10px 20px;
+    color: #898989;
+    font-size: 17px;
+}
+.map-btn b{
+    font-weight: 600;
+    padding: 20px;
+    border-bottom: 2px solid #777;
+    margin-bottom: 10px;
+} */
+/* ================ #*/
+/* .lip-section-2{
+    display: flex;
+    flex-flow: row;
+} */
+/* .lip-section-2{
+    display: flex;
+    padding: 40px 25px  ;
+    display: flex;
+    flex-flow: column;
+    gap: 30px;
+}
+.lip-section-2 h1{
+
+} */
+@media screen and (max-width:800px) {
+    .lip-navbar li{
+        display: none;
+    }
+    .lip-navbar .icon{
+        display: block;
+    }
+    .lip-navbar{
+        justify-content: space-between;
+        padding: 0 20px 0 0 ;
+    }
+    
+}
+/* @media screen and (max-width:800px) {
+    .hero-content h1{
+        font-size: 35px;
+    }
+}
+@media screen and (max-width:390px) {
+    .hero-content h1{
+        font-size: 28px;
+    }
+    .lip-section-1 h1{
+        font-size: 25px;
+    }
+} */
+

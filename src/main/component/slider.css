@@ -1,0 +1,17 @@
+.slider{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    overflow: hidden;
+    height: fit-content;
+    /* min-width: 300px; */
+}
+.slick-slide{
+    min-width: 275px !important;
+    overflow: hidden;
+    /* padding: 0 4vw; */
+}
+/* .slick-list{
+    width: max-content !important;
+} */

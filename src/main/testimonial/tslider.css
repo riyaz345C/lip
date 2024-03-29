@@ -1,0 +1,19 @@
+.slider-controller button{
+    border: none;
+    padding: 10px 20px;
+    color: #000;
+    background-color: #c9c9c9;
+    border: 1px solid #aaa;
+    border-radius: 9px;
+    font-weight: bolder;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all .1s ease-in;
+}
+.slider-controller button:active{
+    box-shadow: 0px 0px 15px #aaa;
+}
+.slider-controller{
+    display: flex;
+    gap: 10px;
+}
