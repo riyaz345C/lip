@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
-import Navbar from './component/Navbar'
+// import Navbar from './component/Navbar'
 import hero from './assets/hero.avif'
 // import Card from './component/Card'
 import './home.css'
 import SliderOwn from './component/SliderOwn'
-import TestimonialCard from './testimonial/TestimonialCard'
+// import TestimonialCard from './testimonial/TestimonialCard'
 import Tslider from './testimonial/Tslider'
+// import Modal from '../popup/Modal'
 const mapData =[{
   place:"chromepet",
   img:"/c",
@@ -34,14 +35,30 @@ function Home() {
       console.log(err);
     }
   }
+  // const [toggle,setToggle] = useState(false)
+  // useEffect(() => {
+  //   popup()
+  
+  //   return () => {
+  //   popup()
+  //   }
+  // }, [])
+  // function popup(){
+  //   const x = setTimeout(() => {
+  //     setToggle(!toggle)
+  //     console.log(0);
+  //   }, 1000);
+  //   console.log(0);
+  // }   
   return (
     <>
-    <Navbar/>
+    {/* {toggle&&<Modal tog={setToggle}/>} */}
     <div className="hero-img-container">
     <img src={hero} alt="" className='hero-img' />
     <section  className='hero-content'>
       <h1>World Class Homes</h1>
       <h1>At the heart of Chennai</h1>
+      {/* <button onClick={()=>setToggle(true)}>tog</button> */}
     </section>
     </div>
     <section className='lip-section-1'>
@@ -65,15 +82,6 @@ function Home() {
 
     </section>
     <section className='lip-section-3'>
-    {/* <h1><span>Customer's </span> Testimonial</h1>
-    <div className="slide">
-    <TestimonialCard/>
-    <TestimonialCard/>
-    <TestimonialCard/>
-    </div>
-    <div className="slider-controller">
-    <button>/=</button><button>=\</button>
-    </div> */}
     <Tslider/>
     </section>
     </>

@@ -15,5 +15,13 @@
 }
 .slider-controller{
     display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 10px;
 }
+/* .slider-controller button{
+    padding: 10px 15px ;
+    text-align: center;
+vertical-align: middle;
+height: fit-content;
+} */

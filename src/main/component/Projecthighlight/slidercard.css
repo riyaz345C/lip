@@ -1,0 +1,40 @@
+.project-highlights-card{
+    /* width: 250px; */
+}
+.project-highlights-card h3{
+    text-align: center;
+}
+.project-highlights-card img{
+    max-width: 100%;
+    margin-bottom:  20px;
+}
+@media screen and (max-width:500px) {
+    .slick-next{
+    right: -20px;
+}
+.slick-prev{
+    left: -20px;
+}
+}
+@media screen and (max-width:390px) {
+    .slick-next{
+    right: -15px;
+}
+.slick-prev{
+    left: -15px;
+}
+}
+.slick-prev,.slick-next{
+    /* background: #b6b4b4;
+    backdrop-filter: blur(9px);
+    border-radius: 50%; */
+}
+.slick-prev,.slick-next :is(:hover){
+    background-color: none;
+}
+.slick-next:before,.slick-prev:before{
+    color: #000;
+}
+.slick-slider button:hover{
+    /* background-color: #000; */
+}

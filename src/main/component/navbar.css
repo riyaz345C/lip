@@ -9,11 +9,23 @@
     background-color: #fffffff6;
     backdrop-filter: blur(9px);
 }
+.lip-nav-links{
+    display: flex;
+    gap: 15px;
+    list-style-type: none;
+    align-items: center;
+    width: max-content;
+}
+.lip-nav-links li a{
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    font-size: 20px;
+}
 .lip-navbar img:first-child{
     width: clamp(100px,50%,200px);
     object-fit: contain;
     height: 100%;
-    /* border: 1px solid #000; */
 }
 .lip-navbar .icon{
     display: none;
@@ -31,7 +43,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    transition: all .5s linear;
+    transition: all .3s ease;
     overflow: hidden;
     z-index: 10000;
  }

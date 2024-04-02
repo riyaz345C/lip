@@ -40,8 +40,8 @@ function Tslider() {
     })}
     </div>
     <div className="slider-controller">
-    <button onClick={prv} onMouseEnter={()=>setStop(true)} onMouseLeave={()=>setStop(false)}> ← </button>
-    <button onClick={next} onMouseEnter={()=>setStop(true)} onMouseLeave={()=>setStop(false)}>→</button>
+    <button onClick={prv} onMouseEnter={()=>setStop(true)} onMouseLeave={()=>setStop(false)}> <div>←</div> </button>
+    <button onClick={next} onMouseEnter={()=>setStop(true)} onMouseLeave={()=>setStop(false)}><div>→</div></button>
     </div>
     </>
   )
