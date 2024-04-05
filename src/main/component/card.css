@@ -5,7 +5,8 @@
     --primary:#8c241d;
     --white:#fff;
     --card-shadow:  0px 1px 5px 0px #e0e2e6;
-    --br-color: #d7d7d7
+    --br-color: #d7d7d7;
+    --br-dark:#a9a9a9
 }
 .pr-color {
     color: var(--primary-color);
@@ -13,7 +14,7 @@
 .se-color {
     color: var(--secondary-color);
 }
-.card{
+.primary-card{
     display: flex;
     flex-flow: column;
     /* width: 33%; */
@@ -25,14 +26,14 @@
     border-radius: 10px 10px 5px 5px;
     margin: 0 auto;
 }
-.card :not(img){
+.primary-card :not(img){
     padding: 0 10px;
 }
-.card img{
+.primary-card img{
     width: 100%;
     border-radius: 4px 4px 0 0 ;
 }
-.card button{
+.primary-card button{
     /* width: 100px; */
     border: none;
     padding: 10px 20px;
@@ -45,8 +46,20 @@
 .spec1,.spec2{
     display: flex;
 }
-.spec1 :not(:last-child){
-    border-left: 1px solid var(--br-color);
+.spec1 :nth-child(2){
+    border: 1px solid var(--br-dark);
+    border-width: 0 1px;
 }
 .spec2 :first-child{margin: 0 auto 0 0;}
+.spec1 .icon{
+    text-align: center;
+    width: 33%;
+    font-size: 12px;
+}
 .spec2 :not(:first-child){margin: 0 0 0 auto;}
+
+.social-media div{width: fit-content;}
+.social-media{
+    display: flex;
+    width: fit-content;
+}

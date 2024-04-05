@@ -10,9 +10,7 @@ function Faq({question,answer}) {
     <div className={`faq-container ${view?'showC':'hideC'}`}>
     <div className="question" onClick={()=>{handleClick()}}>{ question } ? <span>{view?'-':'+'}</span></div>
     <div className={`answer ${view?'show':'hide'}`}>
-        {/* <div style={{}}> */}
         {answer}
-        {/* </div> */}
     </div>
     </div>
    </>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 // import Navbar from './component/Navbar'
 import hero from './assets/hero.avif'
 // import Card from './component/Card'
@@ -6,7 +6,7 @@ import './home.css'
 import SliderOwn from './component/SliderOwn'
 // import TestimonialCard from './testimonial/TestimonialCard'
 import Tslider from './testimonial/Tslider'
-// import Modal from '../popup/Modal'
+import Modal from '../popup/Modal'
 const mapData =[{
   place:"chromepet",
   img:"/c",
@@ -35,24 +35,25 @@ function Home() {
       console.log(err);
     }
   }
-  // const [toggle,setToggle] = useState(false)
-  // useEffect(() => {
-  //   popup()
+  const [toggle,setToggle] = useState(false)
+  useEffect(() => {
+    popup()
   
-  //   return () => {
-  //   popup()
-  //   }
-  // }, [])
-  // function popup(){
-  //   const x = setTimeout(() => {
-  //     setToggle(!toggle)
-  //     console.log(0);
-  //   }, 1000);
-  //   console.log(0);
-  // }   
+    return () => {
+    popup()
+    }
+  }, [])
+  function popup(){
+    const x = setTimeout(() => {
+      setToggle(!toggle)
+      console.log(10);
+    }, 1000);
+    return x
+    console.log(20);
+  }   
   return (
     <>
-    {/* {toggle&&<Modal tog={setToggle}/>} */}
+    {toggle&&<Modal tog={setToggle}/>}
     <div className="hero-img-container">
     <img src={hero} alt="" className='hero-img' />
     <section  className='hero-content'>

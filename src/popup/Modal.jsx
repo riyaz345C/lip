@@ -26,13 +26,16 @@ const overlay ={
 const Modal = ({tog}) => {
     const [xe,setX] = useState(false)
     useEffect(()=>{
-    if(tog){
+    function pop(){
+        if(tog){
             let x = setTimeout(()=>{
-                setX(!xe)
-                console.log();
-            },1000)
-            console.log(x);
-        }
+               setX(!xe)
+               console.log();
+           },1000)
+           console.log(x);
+       }
+    }
+        return ()=>pop()
     },[tog,xe])
   return ReactDOM.createPortal(
     

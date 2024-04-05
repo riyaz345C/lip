@@ -1,0 +1,80 @@
+.popup-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .popup-form {
+    background-color: #c7c5c4;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 1px 1px 1px #666;
+    position: relative;
+    width: 350px;
+    padding: 40px 40px;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .login11 input {
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    margin: 30px 0;
+    padding: 14px 12px;
+    font-size: 16px;
+    border-radius: 2px;
+    font-family: Raleway, sans-serif;
+  }
+  
+  .login11 input[type=text]:focus,
+  .login11 input[type=password]:focus {    
+    background-color: #f5f5dc;
+  }
+  
+  .login11 button {
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #a54141; 
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .login11 button:hover {
+    background-color: #f0683f; 
+  }
+  
+  .popup-logo{
+    width: 155px;
+    height: 96px;
+    margin-left: 50px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .popup-form {
+      width: 90%; 
+    }
+    .popup-logo{
+        width: 155px;
+        height: 96px;
+        /* margin-left: 50px; */
+      }
+
+
+  }

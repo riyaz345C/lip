@@ -3,13 +3,14 @@ import ProductInfo from './ProductInfo'
 import './product.css'
 import Headline from './Headline'
 import LocationAdvantage from './LocationAdvantage'
-// import { BiSolidCheckbox } from "react-icons/bi";
+import { BiSolidCheckbox } from "react-icons/bi";
 import SliderOwn from '../component/SliderOwn'
 import ProductPlan from './ProductPlan'
 import { faqData } from '../data/faq'
 import Faq from '../component/FAQ/Faq'
 // import SliderCard from '../component/Projecthighlight/SliderCard'
 import ProjectHighSlider from '../component/Projecthighlight/ProjectHighSlider'
+import { features } from '../data/spec'
 // import {} from '../component/Faq'
 
 
@@ -69,7 +70,8 @@ function Product() {
     </section>
     <div className="enquire-form">
       <h1 className="form-title">Enquire Form</h1>
-      <input type="text" name="" id="" placeholder="Name" />
+      <input type="text" name="" id="" placeholder="Name" style={{background: '#fff',
+border: '1px solid #bbb', padding: '12px 9px',width: '80%',margin:'0'}}/>
       <input type="number" name="" id="" placeholder="Number" />
       <input type="email" name="" id="" placeholder="Email" />
       <input type="submit" name="" id="" value={'submit'} className='submit' />
@@ -79,8 +81,20 @@ function Product() {
    <ProjectHighSlider/>
    </section>
    <section className='section section-spec'>
-    <div className="product-spec1">sqqsq</div>
-    <div className="product-spec2"> sqsq</div>
+    <div className="product-spec1">
+      <div className="spec-content">
+      <h2>Specifications</h2>
+      <p>The fusion of impeccable design and premium materials ensures that residents of VGN Notting Hill in Nungambakkam. Read More...</p>
+      </div>
+      <img src={require('../assets/projects-specification-img-brixton.png')} style={{height:'100%'}} alt="" />
+    </div>
+    <div className="product-spec2"> 
+    {features.map((e,i)=>{
+      return(
+        <li className='list' key={i}><BiSolidCheckbox/> {e}</li>
+      )
+    })}
+    </div>
    </section>
     <ProductPlan/>
     {/* <BiSolidCheckbox style={{color:'#f00'}}/> */}

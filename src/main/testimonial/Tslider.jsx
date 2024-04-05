@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import TestimonialCard from './TestimonialCard'
 import './tslider.css'
-const map = [1,2,3,4,5,6,7,8,9]
+const map = [1,2,3,4,5,6,7,8,9] //demo
 function Tslider() {
     const [x,setX]=useState(0);
     const [autoPlayStop,setStop] = useState(false)

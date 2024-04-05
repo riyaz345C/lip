@@ -1,0 +1,21 @@
+export const features = [
+    "RCC Framed Structure With Earthquake Resistant Design",
+    "Engineered Marble Flooring For Foyer, Living And Dining",
+    "Premium Laminated Wooden Flooring For Master Bedroom",
+    "Vitrified Tiles Flooring For Other Bedrooms And Kitchens",
+    "Anti-Skid Floor Tiles In Bathrooms",
+    "SS Handrail For Main Staircase",
+    "Teak Wood Door With Architrave For Main Door",
+    "Veneer Flush Doors For Internal Doors",
+    "Premium UPVC Windows",
+    "Premium CP Fittings",
+    "Premium White Sanitary Fittings",
+    "Premium Modular Switches",
+    "Geyser Power Point Provision In All Toilets",
+    "100% DG Back Up",
+    "Security Intercom With Video Door Phone",
+    "Air-Condition Power Point Provisions In Living, Dining And All Bedrooms",
+    "Premium Automatic Elevators With SS Finish",
+    "Automatic Car Parking",
+    "Automatic Fire Sprinklers In Basements, Hydrant System In Common Area"
+  ];

@@ -4,7 +4,7 @@ import './slider.css'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-const title=['qwer','123','asdf','zxcv','cftg']
+const title=['qwer','123','asdf','zxcv','cftg'] //demo 
 function SliderOwn() {
   const [width,setWidth]=useState()
   
@@ -23,9 +23,9 @@ function SliderOwn() {
         // slidesToShow: ((width<800)? 1 : ((width<888)? 2 : 3) ),  
         slidesToShow: ((3) ),  
         slidesToScroll: 1,
-        // autoplay:true,
+        autoplay:true,
         autoplaySpeed:2000,
-        // pauseOnHover:true
+        pauseOnHover:true,
         responsive:[
           {
             breakpoint:890,
@@ -42,16 +42,13 @@ function SliderOwn() {
       };
   return (
     <>
-    {/* <div className="slider"> */}
     <Slider {...settings}>
       {title.map((e,i)=>{
         return(
           <Card title={e} key={i}/>
         )
       })}
-        {/*  */}
     </Slider>
-    {/* </div> */}
     </>
   )
 }

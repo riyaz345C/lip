@@ -1,0 +1,260 @@
+.containerfoot{
+background-color:#323232;
+
+}
+
+
+.bgg{
+/* background-color: black; */
+text-align: center;
+
+}
+.footerimg{
+    width: 70px;
+    height: 50px;
+    margin-top: 10px;
+    
+}
+.footpara{
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #fff;
+    padding: 0px 20px;
+    text-align: center;
+}
+
+
+.containerbg {
+    display: flex;
+
+}
+/* .item {
+    flex: 1; 
+} */
+/* .item:last-child {
+    margin-right: 0; 
+} */
+
+.address-list{
+    display: flex;
+    justify-content:space-between; 
+    padding:  100px ;
+     padding-top: 0px;
+     padding-bottom: 0px;
+}
+.address{
+    float: left;
+}
+.address h2 {
+    font-size: 19px;
+    color: #fff;
+    margin-bottom: 10px;
+    margin-left: 40px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+}
+.address ul li  {
+    font-size: 19px;
+    color: #fff;
+    list-style-type: none;
+}
+.follow{
+    font-size: 19px;
+    color: #fff;
+    margin-bottom: 10px;
+    margin-left: 40px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+}
+
+.address-links{
+    float: right; 
+}
+.listt {
+    display: flex;
+    gap: 6px;
+    font-size: 15px;
+    color: #fff;
+    list-style-type: none;
+}
+/* .iconn{
+    font-size: 45px;
+    color: aliceblue;
+} */
+
+
+
+.iconn {
+    font-size: 45px;
+    color: aliceblue;
+    transition: color 0.3s ease;
+    }
+    
+    .iconn:hover {
+    color: brown;
+    }
+
+
+
+.hr{
+    width: 80%;
+    height: 4px;
+    background-color: #fff;
+    margin: 0%;
+    margin-left: 130px;
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+
+.hitem{
+    color: #fff;
+}
+
+.fivelinks{
+    display: flex;
+    /* align-items: center; */
+    justify-content:space-evenly;
+    padding: 0px 80px 0px 80px;
+
+}
+
+.sub-links{
+
+margin-top: 4px;
+    display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  /* gap: 2px; */
+  text-decoration: none;
+  color: #fff;
+}
+
+.copypara{
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: medium;
+}
+
+.copyright{
+    background-color: #ffffff;
+    /* padding: 20px 0px; */
+}
+
+
+/* .item1{
+    width: 200px;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Add media query for smaller screens */
+@media only screen and (max-width: 768px) {
+    .containerbg {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: center; /* Center items horizontally on smaller screens */
+    }
+
+    .address-list {
+        flex-direction: column; /* Stack address and follow sections vertically on smaller screens */
+        padding: 20px; /* Reduce padding on smaller screens */
+    }
+
+    .address {
+        text-align: center; /* Center address text on smaller screens */
+        margin-bottom: 20px; /* Add some space between address and follow sections */
+    }
+
+    .address h2{
+font-size: medium;
+/* margin-left: auto; */
+    }
+    .address ul li{
+
+        font-size: medium;
+/* margin-left: auto; */
+/* margin-right: 10px; */
+    }
+
+    .address-links {
+        text-align: center; 
+        margin-top: 20px; /* Add some space between address and follow sections */
+    }
+
+    .listt {
+        justify-content: center; /* Center social media icons on smaller screens */
+    }
+
+    .iconn {
+        font-size: 36px;
+        color: aliceblue;
+        transition: color 0.3s ease;
+        }
+        
+        .iconn:hover {
+        color: brown;
+        }
+    
+  
+    .hr {
+        width: 65%; 
+        margin: 0%;
+        margin-left: 80px;
+        height: 3px;
+    }
+}
+@media only screen and (max-width: 768px) {
+
+.fivelinks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 0px 20px; /* Adjust padding for smaller screens */
+}
+
+.item1,
+.item2,
+.item3,
+.item4,
+.item5 {
+    width: 100%; /* Each item takes full width on smaller screens */
+    margin-bottom: 20px; /* Add some space between items */
+}
+
+.sub-links {
+    display: block; /* Display links as block elements */
+    text-align: center; /* Center-align the links */
+    margin-top: 10px; /* Add some space between links */
+    color: #fff;
+}
+
+.fivelinks h4{
+text-align: center;
+
+}
+
+
+}

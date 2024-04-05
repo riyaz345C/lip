@@ -19,8 +19,8 @@ function ProductPlan() {
         </div>
         <div className="project-content">
             {nav?<>
-            <img src={require('../assets/hero.avif')} alt="" />
-            </>:<>site</>}
+            <img src={require('../assets/Floorplan-thumb-1.jpg')} alt="" />
+            </>:<> <img src={require('../assets/site-plan.jpg')} alt="" /></>}
         </div>
     </section>
   )

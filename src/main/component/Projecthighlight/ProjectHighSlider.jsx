@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './slidercard.css'
 import SliderCard from './SliderCard';
-const x = [1,2,3,4,5,6,7,8,9]
+const x = [1,2,3,4,5,6,7,8,9] //demo
 function ProjectHighSlider() {
     var settings = {
         dots: true,
@@ -43,30 +43,6 @@ function ProjectHighSlider() {
                     </div>
                 )
             })}
-            {/* <div>
-            <SliderCard/>
-            </div>
-            <div>
-              <h3>2</h3>
-            </div>
-            <div>
-              <h3>3</h3>
-            </div>
-            <div>
-              <h3>4</h3>
-            </div>
-            <div>
-              <h3>5</h3>
-            </div>
-            <div>
-              <h3>6</h3>
-            </div>
-            <div>
-              <h3>7</h3>
-            </div>
-            <div>
-              <h3>8</h3>
-            </div> */}
           </Slider>
         </div>
       );
