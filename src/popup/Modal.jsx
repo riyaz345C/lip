@@ -26,20 +26,39 @@ const overlay ={
 const Modal = ({tog}) => {
     const [xe,setX] = useState(false)
     console.log({tog:tog,xe:xe},'line1');
-    useEffect(()=>{
-        function pop(){
-            if(tog){
-                let x = setTimeout(()=>{
-                    setX(!xe)
-                    console.log({tog:tog,xe:xe,},'line2');
-                console.log();
-            },1000)
-            console.log({tog:tog,xe:xe,},'line3');
-           console.log('tttttttttttttttttttttttttttttt');
-       }
-    }
-        return ()=>pop()
-    },[tog,xe])
+    // useEffect(()=>{
+    //     function pop(){
+    //         if(tog){
+    //             let x = setTimeout(()=>{
+    //                 setX(!xe)
+    //                 console.log({tog:tog,xe:xe,},'line2');
+    //             console.log();
+    //         },1000)
+    //         console.log({tog:tog,xe:xe,},'line3');
+    //        console.log('tttttttttttttttttttttttttttttt');
+    //    }    
+    // }
+    //     return ()=>pop()
+    // },[tog,xe])
+    useEffect(() => {
+        let timeoutId;
+
+        function pop() {
+            if (tog) {
+                timeoutId = setTimeout(() => {
+                    setX(true); // No need to negate xe
+                }, 1000);
+            } else {
+                setX(false);
+            }
+        }
+
+        pop();
+
+        return () => {
+            clearTimeout(timeoutId); // Clear the timeout on unmount or dependency change
+        };
+    }, [tog]);
   return ReactDOM.createPortal(
     
         <>
