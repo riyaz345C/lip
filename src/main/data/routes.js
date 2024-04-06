@@ -45,7 +45,7 @@ export const routes = [
 ]
 
 
-// registration
+// registratio
 
 
 // vendorlogin
