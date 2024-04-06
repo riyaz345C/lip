@@ -42,22 +42,29 @@ const Modal = ({tog}) => {
     // },[tog,xe])
     useEffect(() => {
         let timeoutId;
-
+        console.log('u1');
         function pop() {
+            console.log('u2');
             if (tog) {
+                console.log('u3');
                 timeoutId = setTimeout(() => {
                     setX(true); // No need to negate xe
+                    console.log('u4');
                 }, 1000);
             } else {
                 setX(false);
+                console.log('u5');
             }
         }
-
+        
         pop();
-
+        console.log('u6');
+        
         return () => {
+            console.log('u7');
             clearTimeout(timeoutId); // Clear the timeout on unmount or dependency change
         };
+        console.log(xe);
     }, [tog]);
   return ReactDOM.createPortal(
     
