@@ -25,14 +25,17 @@ const overlay ={
 }
 const Modal = ({tog}) => {
     const [xe,setX] = useState(false)
+    console.log({tog:tog,xe:xe},'line1');
     useEffect(()=>{
-    function pop(){
-        if(tog){
-            let x = setTimeout(()=>{
-               setX(!xe)
-               console.log();
-           },1000)
-           console.log(x);
+        function pop(){
+            if(tog){
+                let x = setTimeout(()=>{
+                    setX(!xe)
+                    console.log({tog:tog,xe:xe,},'line2');
+                console.log();
+            },1000)
+            console.log({tog:tog,xe:xe,},'line3');
+           console.log('tttttttttttttttttttttttttttttt');
        }
     }
         return ()=>pop()
