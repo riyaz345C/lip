@@ -58,8 +58,11 @@
 }
 .spec2 :not(:first-child){margin: 0 0 0 auto;}
 
-.social-media div{width: fit-content;}
+/* .social-media div{width: fit-content;} */
 .social-media{
     display: flex;
     width: fit-content;
+}
+.social-media svg{
+    width: 100%;cursor: pointer;
 }

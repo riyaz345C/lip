@@ -31,13 +31,18 @@ function Navbar() {
       onToggle={()=>setVisibility(!visibility)} duration={0.5} rounded  easing="ease" /></div>
     </nav>
 
-    <div className={`sidebar ${visibility?'open':'close'}`}>
+   <div className={`sidebar-container  ${visibility?'open':'close'}`}>
+   <div className={`sidebar ${visibility?'sidebar-open':''}`}>
     {routes.map((e,i)=>{
       return(
+        <>
         <li key={i} onClick={handleClick} > <Link to={e.path}>{e.name}</Link></li>
+        {/* <li key={i} onClick={handleClick} > <Link to={e.path}>{e.name}</Link></li> */}
+        </>
       )
     })}
     </div>
+   </div>
     </>
   )
 }

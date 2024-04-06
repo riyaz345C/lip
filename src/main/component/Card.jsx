@@ -21,7 +21,7 @@ function Card({title}) {
         <div className="spec2 se-color">
             <div className="read-more">read-more</div>
             <div className="social-media">
-            <div className="facebook"><BsFacebook color={'#000'}/></div>
+            <div className="facebook"><BsFacebook color={''}/></div>
             <div className="twitter"><FaXTwitter/></div>
             <div className="linkedin"><BsLinkedin/></div>
             </div>
