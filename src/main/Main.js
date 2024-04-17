@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {  useEffect, useState } from 'react'
 import {BrowserRouter,Routes,Route} from "react-router-dom";
 import Home from './Home';
 import Slider from './Slider';
@@ -14,6 +14,9 @@ import Popupform from '../sabana/popupform/Popupform';
 import Vendorlogin from '../sabana/vendorlogin/Vendorlogin'; 
 // import SimpleSlider from './SliderComp';
 function Main() {
+  // const loc = useLocation();
+  const [foot,setFoot] = useState(false)
+  // useEffect(()=>{},[])
   return (
     
     <>
@@ -30,11 +33,13 @@ function Main() {
       <Route path='/infra' element={<Infra/>}/> 
       <Route path='/vendorlogin' element={<Vendorlogin/>}/>  
     </Routes>
+
     <Footer/>
+
     </BrowserRouter>
     </>
   )
 }
-{/* <Route path='/popupform' element={<Popupform/>}/> */}
 
 export default Main
+{/* <Route path='/popupform' element={<Popupform/>}/> */}

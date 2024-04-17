@@ -5,6 +5,9 @@ import { FaAngleDoubleRight } from "react-icons/fa";
 // import Roadcard from './Roadcard'
 import road1 from './road1.jpg'
 import { FaAlignCenter, FaAngleRight } from "react-icons/fa";
+import Tslider from "../../main/testimonial/Tslider";
+import SliderOwn from "../../main/component/SliderOwn";
+import ProjectHighSlider from "../../main/component/Projecthighlight/ProjectHighSlider";
 
 
 const Infra = () => {
@@ -99,9 +102,12 @@ The VGN Group is one of Chennai's leading property developers, with over eight d
 
     
 <br /><br />
+<div className="bridge">
 <h2 className="infra-title" id="bridges">
 <span>Bridge   </span> Projects 
     </h2>
+    <ProjectHighSlider/>
+</div>
 
     <p className="about-whovr">
     Our infrastructure development prowess extends to bridges, connecting communities across Tamil Nadu's diverse landscapes, keeping traffic flowing and fostering economic growth
@@ -231,9 +237,12 @@ The VGN Group is one of Chennai's leading property developers, with over eight d
     </div>
 
     <br /><br />
+<div className="infra">
 <h2 className="infra-title">
 <span>Featured    </span>  Projects 
     </h2>
+    <SliderOwn/>
+</div>
 
 
 

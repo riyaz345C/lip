@@ -166,8 +166,46 @@ padding-top: 35px;
     margin:  0 auto;
     border-radius: 0%;
 }
-
-
+.bridge{
+  margin: 0 4vw;
+}
+.infra {
+  margin: 0 4vw;
+  height: 900px;
+}
+@media screen and (max-width:615px) {
+  .infra .slick-next{
+    right: -20px;
+  }
+  .bridge .slick-next{
+    right: -20px;
+  }
+  .infra .slick-prev{
+    left: -20px;
+  }
+  .bridge .slick-prev{
+    left: -20px;
+  }
+  
+}
+@media screen and (max-width:500px) {
+  .infra .slick-next{
+    right: -13.5px;
+  }
+  .infra .slick-prev{
+    left: -13.5px;
+  }
+  .bridge .slick-next{
+    right: -13.5px;
+  }
+  .bridge .slick-prev{
+    left: -13.5px;
+  }
+  
+}
+.infra .slick-dots{
+  /* bottom: -26px; */
+}
 
 
 
@@ -202,8 +240,9 @@ padding-top: 35px;
     overflow: hidden;
     height: auto; 
     border-radius: 0%;
+    margin: 0 auto;
     margin-bottom: 20px;
-    margin-left: 50px;
+    /* margin-left: 50px; */
   }
   
   .card-img-top {

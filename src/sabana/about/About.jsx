@@ -79,7 +79,32 @@ const About = () => {
 
 
 <p className="about-whovr">
-The VGN Group is one of Chennai's leading property developers, with over eight decades of expertise in residential buildings and plotted developments in Chennai. Instituted in 1947, the company has developed many landmark buildings and transformed the skyline of Chennai. VGN has successfully carved a niche for itself in the ever-dynamic real estate industry over the last 83 years. Since its inception, VGN has completed 250+ buildings, amounting to over 20 million sq. ft. of developed space across a diverse real estate portfolio. VGN assures best-in-class design and top-of-the-line facilities that exude elegance and sophistication. The residential developments include affordable, premium residences, luxury apartments, value homes, plotted developments, and mixed-use lifestyle enclaves and townships. Over the years, the projects have been one-of-a-kind in the sector; for example, VGN developed VGN Notting Hill, a luxury lifestyle enclave next to Hotel Taj Coromandel in Nungambakkam, and VGN Coasta, a luxury sea-facing apartment complex bang on ECR, Chennai. VGN also enjoys a reputation for developing over 600 acres of plotted developments, amongst a few developers in Chennai. The commercial segment has seen consistent growth over the last few years; hence, VGN is also venturing into office spaces, retail, and industrial warehouses under development.
+{/* Lands India Properties very much delighted to welcome All. we started our organization  in 2012.
+The Company was formed to develop well designed and customer satisfaction of real estate in chennai. We have successfull
+sold more than 20 Projects. We have successfully  completed 9 years and we stepped into our 10th year */}
+Lands India Properties is thrilled to extend our heartfelt greetings to all. Since our inception in 2012, our 
+primary goal has been to revolutionize the real estate landscape in Chennai by offering meticulously crafted properties that prioritize
+ customer satisfaction above all else. With a track record of successfully selling over 20 projects, we have consistently delivered on 
+ our promise of quality and excellence.
+
+As we celebrate the completion of nine successful years, we are proud to announce the commencement of our milestone tenth year. This 
+significant milestone not only underscores our dedication to our craft but also serves as a testament to the trust and confidence 
+bestowed upon us by our esteemed clientele.
+
+Looking ahead, we are excited about the opportunities that lie before us as we continue to innovate, evolve, and exceed expectations 
+in the dynamic real estate market. At Lands India Properties, our commitment to excellence remains unwavering, and we are committed to 
+`   shaping the future of real estate in Chennai and beyond.
+{/* The VGN Group is one of Chennai's leading property developers, with over eight decades of expertise
+ in residential buildings and plotted developments in Chennai. Instituted in 1947, the company 
+has developed many landmark buildings and transformed the skyline of Chennai. VGN has successfully carved a niche for itself in 
+the ever-dynamic real estate industry over the last 83 years. Since its inception, VGN has completed 250+ buildings, amounting to 
+over 20 million sq. ft. of developed space across a diverse real estate portfolio. VGN assures best-in-class design and top-of-the-line 
+facilities that exude elegance and sophistication. The residential developments include affordable, premium residences, luxury apartmen
+ts, value homes, plotted developments, and mixed-use lifestyle enclaves and townships. Over the years, the projects have been one-of-a-
+kind in the sector; for example, VGN developed VGN Notting Hill, a luxury lifestyle enclave next to Hotel Taj Coromandel in Nungambakkam
+, and VGN Coasta, a luxury sea-facing apartment complex bang on ECR, Chennai. VGN also enjoys a reputation for developing over 600 acre
+s of plotted developments, amongst a few developers in Chennai. The commercial segment has seen consistent growth over the last few year
+s; hence, VGN is also venturing into office spaces, retail, and industrial warehouses under development. */}
 </p>
 
 <div className="Brochure">
@@ -115,7 +140,7 @@ Our Corporate Brochure
 
 
 <br />
- {/* 8888888888888888888888  vision 88888888888888888888 */}
+ {/* 8888888888888888888888  vision  88888888888888888888 */}
 
 <div className="vision">
 <div className="item12">  
