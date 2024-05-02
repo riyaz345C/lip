@@ -1,8 +1,8 @@
 export const api = {
     login:'https://lipapi.onrender.com/login',
     protected:'https://lipapi.onrender.com/protected',
-    delete:'http://lipapi.onrender.com/delete',
-    projects:'http://lipapi.onrender.com/projects',
+    delete:'https://lipapi.onrender.com/delete',
+    projects:'https://lipapi.onrender.com/projects',
     get:'https://lipapi.onrender.com/'
 }
 export const local = {
