@@ -36,6 +36,17 @@ export const routes = [
     },
     {
         name:"registration",
+        dropdown:[
+            {
+                name:'Customer Login'
+            },
+            {
+                name:'Vendor Login'
+            },
+            {
+                name:'Vendor Registration'
+            }
+        ],
         path:"registration"
     },
     {

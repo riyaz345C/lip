@@ -1,0 +1,22 @@
+.form{
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #eee;
+    width: fit-content;
+}
+.input{
+    width: 200px !important;
+}
+.button{
+    padding: 10px 15px;
+    border: 1px solid #cc9;
+    background-color: #f5f5cc;
+    width: 100%;
+}
+.message{
+    font-weight: 800;
+    font-size: large;
+}

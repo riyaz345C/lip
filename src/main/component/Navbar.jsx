@@ -4,11 +4,15 @@ import './navbar.css'
 import { Link } from 'react-router-dom'
 import Hamburger from 'hamburger-react'
 import { routes } from '../data/routes'
+import useFetch from '../../adminPanel/project/useFetch'
 
 
 function Navbar() {
   const[visibility,setVisibility]=useState(false)
   const [isOpen, setOpen] = useState(false)
+  const [dropDown,setDropDown] = useState(false)
+  const [load,error,projectData] = useFetch('http://localhost:4000/projects')
+  // console.log(projectData);
   function handleClick(x){
     window.scrollTo({top:0,behavior:'smooth'})
     setVisibility(!visibility)
@@ -24,7 +28,9 @@ function Navbar() {
     <img src={logo} alt="Logo" />
     <div className='lip-nav-links'>{routes.map((e,i)=>{
       return(
-        <li key={i} onClick={handleClickX} > <Link to={e.path}>{e.name}</Link></li>
+        <li key={i} onClick={handleClickX} > <Link to={e.path}>{e.name}
+        {e.dropdown?'/':''}
+        </Link></li>
       )
     })}</div>
      <div className="icon"><Hamburger className='icon' toggled={isOpen} toggle={setOpen}
@@ -36,7 +42,21 @@ function Navbar() {
     {routes.map((e,i)=>{
       return(
         <>
-        <li key={i*2} onClick={handleClick} > <Link to={e.path}>{e.name}</Link></li>
+        <li key={i*2}  > <Link to={e.path} onClick={handleClick}>
+          {e.name}
+        </Link>
+          {e.name!=='Product'?''
+          : 
+          <>'\/'<button onClick={()=>setDropDown(prv=>prv=!prv)}>set</button>
+          {!dropDown ?<></>:<>
+         {projectData[0].projects.map((e,i)=>{
+          return(
+            <div>{e.projectName}</div>
+          )
+         })}
+          </>
+          }</>}
+        </li>
         {/* <li key={i} onClick={handleClick} > <Link to={e.path}>{e.name}</Link></li> */}
         </>
       )

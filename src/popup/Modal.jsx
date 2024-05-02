@@ -81,7 +81,6 @@ const Modal = ({tog}) => {
         </>,
       document.getElementById('portal')
   )
-
 }
 
 export default Modal
