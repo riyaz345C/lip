@@ -4,17 +4,20 @@ import './slider.css'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import useFetch from '../../adminPanel/project/useFetch';
+import { api } from '../../adminPanel/api';
 const title=['qwer','123','asdf','zxcv','cftg'] //demo 
 function SliderOwn() {
-  const [width,setWidth]=useState()
+  // const [width,setWidth]=useState()
   
-  useEffect(() => {
-    const handleResize = () => {
-      setWidth(window.innerWidth);
-    };
-
-    window.addEventListener('resize', handleResize);
-  }, []);
+  const [x,y,dataFetched] = useFetch(api.projects)
+  console.log(x,y,dataFetched);
+  // useEffect(() => {
+    // const handleResize = () => {
+    //   setWidth(window.innerWidth);
+    // };
+    // window.addEventListener('resize', handleResize);
+  // }, []);
 
     var settings = {
         dots: true,
@@ -43,11 +46,11 @@ function SliderOwn() {
   return (
     <>
     <Slider {...settings}>
-      {title.map((e,i)=>{
+      {dataFetched?dataFetched[0].projects.map((e,i)=>{
         return(
-          <Card title={e} key={i}/>
+          <Card title={e.projectName} key={i}/>
         )
-      })}
+      }):<>loading...</>}
     </Slider>
     </>
   )

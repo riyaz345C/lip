@@ -1,7 +1,9 @@
 import axios from 'axios'
 import React, { useState } from 'react'
+import {useParams} from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import { api } from '../../../api'
+
 
 function FechHook(box
     ,projectRef
@@ -18,9 +20,10 @@ function FechHook(box
     ,boxHeadsRefs
     ,boxContentRefs
     ,amenitiesContentRef,
-    amenitiesImgUrlRef,formRef,titleRef
+    amenitiesImgUrlRef,formRef,titleRef,method
     ) {
         const nav =useNavigate()
+        const params = useParams()
         const [fetchData,setFetchData] = useState([])
         let value = (x) => {return x.current.value}
         let logg = async() =>{
@@ -69,11 +72,18 @@ function FechHook(box
             fileData.append(`projectplan`,projectPlanRef.current.files[0])
             fileData.append('postdata',JSON.stringify(postData))
 
-            // console.log(postData);
-
-                let postDat = await axios.post(`${api.protected}?projectname=${postData.projectName}`,fileData,{
+            console.log(postData);
+            let postDat
+            if(method === 'ADD'){
+                 postDat = await axios.post(`${api.protected}?projectname=${postData.projectName}`,fileData,{
                     headers:{Authorization:`bearer ${localStorage.getItem('lipToken')}`}
                 })
+            } else if(method === 'UPDATE'){
+                console.log(postData);
+                 postDat = await axios.put(`${api.update}?projectname=${params.id}`,fileData,{
+                    headers:{Authorization:`bearer ${localStorage.getItem('lipToken')}`}
+                })
+            }
 
                 setFetchData(postDat)
                 formRef.current.reset()

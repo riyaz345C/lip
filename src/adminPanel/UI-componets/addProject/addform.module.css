@@ -1,8 +1,23 @@
-.form input{
+.form{
+    width:75%;
+    background-color:#efefef;
+    border: 1px solid #ddd;
+    padding: 50px 20px;
     margin: auto;
 }
+.input{
+    background: #fff !important;
+    padding: 15px !important;
+    border: 1px solid #ccc !important;
+    font-family: 'poppins';
+}
+.btn{
+    padding: 10px;
+    border: 1px solid #ccc;
+    font-family: 'poppins';
+    background-color: #fff;
+}
 .points{
-
     display: flex;
     gap: 20px;
     flex-flow: wrap;
@@ -23,6 +38,17 @@
 }
 .box:hover{
     background-color: #eee;
+}
+.ammenities{
+    display:flex;
+    flex-wrap:wrap;
+    column-gap:10px
+}
+.ammenities > input {
+    background-color: #999 !important;
+}
+content{
+    background-color: #999 !important;
 }
 /* .point{
 

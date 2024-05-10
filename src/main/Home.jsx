@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from 'react'
-// import Navbar from './component/Navbar'
 import hero from './assets/hero.avif'
-// import Card from './component/Card'
 import './home.css'
 import SliderOwn from './component/SliderOwn'
-// import TestimonialCard from './testimonial/TestimonialCard'
 import Tslider from './testimonial/Tslider'
 import Modal from '../popup/Modal'
 const mapData =[{
@@ -25,6 +22,7 @@ const mapData =[{
 function Home() {
   const [map,setMap] = useState('/c')
   const[url,setUrl] = useState(require('./assets/hero.avif'))
+
   const mapChng = async(e)=>{
     try{
       // console.log(e.target.children);
@@ -35,6 +33,7 @@ function Home() {
       console.log(err);
     }
   }
+  
   const [toggle,setToggle] = useState(false)
   useEffect(() => {
     popup()
@@ -43,6 +42,7 @@ function Home() {
     popup()
     }
   }, [])
+
   function popup(){
     const x = setTimeout(() => {
       setToggle(!toggle)

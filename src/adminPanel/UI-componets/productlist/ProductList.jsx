@@ -25,6 +25,7 @@ function ProductList({list,setState}) {
         })} */}
         <th>amenities total</th>
         <th>delete</th>
+        <th>update</th>
         </tr>
       </thead>
       <tbody>
@@ -38,6 +39,7 @@ function ProductList({list,setState}) {
           <td><Link to={`/admin/project/${e.projectName}`} >visit</Link></td>
          <td style={{textAlign:'center'}}>{e.projectsAmmenities.length}</td>
          <td><button onClick={()=>deleteFunction(e.projectName,setState)}>delete</button></td>
+         <td><Link to={`/admin/update/${e.projectName}`}>update</Link></td>
         </tr>
           )
         }):'loading.....'}

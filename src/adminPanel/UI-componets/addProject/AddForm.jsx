@@ -1,7 +1,7 @@
-import React, { useReducer, useRef, useState } from 'react'
+import React, { useRef } from 'react'
 import { dataFields } from './datafields'
 import sty from './addform.module.css'
-import axios from 'axios'
+// import axios from 'axios'
 import Statehook from './stateHook/Statehook'
 import FechHook from './stateHook/FechHook'
 import Ammenities from './component/Ammenities'
@@ -43,71 +43,91 @@ function AddForm() {
         ,locationRef,projectPlanRef,points,amenities
         ,faq,questionRefs,answerRefs,pointsRefs,boxHeadsRefs
         ,boxContentRefs,amenitiesContentRef,amenitiesImgUrlRef,
-    formRef,titleRef)
+    formRef,titleRef,'ADD')
     // custom hook for bounce back to login if not 
-
-
         return (
     <>
     <form onSubmit={onSubmit} ref={formRef} className={sty.form}>
-        <div className="input">
+
+        {/* input-field : projectName */}
+        <div className={`input`}>
             <label htmlFor="">{dataFields.projectName}</label>
-            <input type="text" ref={projectRef} />
+            <input type="text" className={`${sty.input}`} ref={projectRef} />
         </div>
-        <div className="input">
+
+        {/* input-field : Box */}
+        <div className={`input`}>
             <label htmlFor="">{dataFields.subTitle}</label>
-            <input type="text" ref={subTitleRef}/>
+            <input type="text" className={`${sty.input}`} ref={subTitleRef}/>
         </div>
-        {/* box */}
-            <h3 >Box</h3> {/*css working */}
+            <h3 >Box</h3> 
         <div className={`input ${sty.boxs}`}>
+        {/* Array of {id,head,body} */}
             <Box boxArray={box} headRefs={boxHeadsRefs} contentRefs={boxContentRefs} style={sty}/>
         </div>
-        <div className="input">
+
+        {/* input-field : projectOverview */}
+        <div className={`input`} style={{display:'flex',flexFlow:'column',gap:'10px'}}>
             <label htmlFor="">{dataFields.projectOverview}</label>
-            <input type="text" ref={projectOverviewRef}/>
+            <textarea rows={'10'} style={
+                {maxWidth:'100%',maxHeight:'134px',
+                fontFamily:'poppins',border:'1px dashed #aaa',
+                outline:'none',padding:'10px 10px 0',}}
+                type="text" placeholder='Type Project Overview In Paragraph' ref={projectOverviewRef}>
+
+            </textarea>
         </div>
-        <div className="input">
+
+        {/* input-field : location */}
+        <div className={`input`}>
             <label htmlFor="">{dataFields.location}</label>
-            <input type="text" ref={locationRef} />
+            <input type="text" className={`${sty.input}`} ref={locationRef} />
         </div>
-        {/* nerby attraction */}
-        <div className="input">
+
+        {/* input-field : Attraction */}
+        <div className={`input`}>
             <h3>Near By Attraction</h3>
             <label htmlFor=""> {dataFields.nearbyAttraction.title}</label>
-            <input type="text" ref={titleRef} />
-                Total Points : {points.length} <br />
-                <button onClick={addPoint}>Add Points</button>
-                <button onClick={removePoint}>Remove Points</button>
+            <input type="text" className={`${sty.input}`} ref={titleRef} />
+            Total Points : {points.length} <br />
+            <button className={sty.btn} onClick={addPoint}>Add Points</button>
+            <button className={sty.btn} onClick={removePoint}>Remove Points</button>
             <div className={sty.points}>
+                {/* array of {id,point} */}
                 <Points pointsArray={points} pointsRefs={pointsRefs}/>
             </div>
-
         </div>
-        {/* amenities */}
-        <div className="input">
+
+        {/* input-field : Amenities */}
+        <div className={`input`} >
             <label htmlFor="">Amenities</label>
-            <button onClick={addAmenities}>Add amenities</button>
-            <button onClick={removeAmenities}>Remove amenities</button> 
+            <button className={sty.btn} onClick={addAmenities}>Add amenities</button>
+            <button className={sty.btn} onClick={removeAmenities}>Remove amenities</button> 
             total : {amenities.length}
-            
+            {/* array of {id,img,content} */} 
             <Ammenities stateArray={amenities} imgRef={amenitiesImgUrlRef} 
-            contentRef={amenitiesContentRef} />
-            </div>
-        <div className="input">
+            contentRef={amenitiesContentRef} classX={sty.ammenities} />
+        </div>
+
+        {/* input-field : projectsPlan */}
+        <div className={`input`}>
             {/* <label htmlFor="">{dataFields.projectsPlan}</label>
             <input type="file" ref={projectPlanRef} required /> */}
             <ImgUpload label={dataFields.projectsPlan} inpRef={projectPlanRef} />
         </div>
-        {/* faq */}
-        <div className="input" >
+
+        {/* input-field : FAQ */}
+        <div className={`input`} >
             <label htmlFor="">FAQ</label>
-            <button onClick={addQuestion}>Add question</button>
-            <button onClick={removeQuestion}>Remove question</button> 
+            <button className={sty.btn} onClick={addQuestion}>Add question</button>
+            <button className={sty.btn} onClick={removeQuestion}>Remove question</button> 
             total : {faq.length}
+            {/* array of {question ,answer} */}
             <Faq faqArray={faq} questionRefs={questionRefs} answerRefs={answerRefs} />
         </div>
-       <input type="submit" value="submit" onClick={(e)=>{}}/> 
+
+        {/* submit btn */}
+       <input type="submit"  className={sty.btn}  value="submit" onClick={(e)=>{}}/> 
 
     </form>
     </>

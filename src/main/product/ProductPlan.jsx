@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './projectplan.css'
 import Headline from './Headline'
 
-function ProductPlan() {
+function ProductPlan({img}) {
     const[nav,setnav]=useState(false)
     const handleNav = (set)=>{
         set(prv => prv=!prv)
@@ -18,9 +18,11 @@ function ProductPlan() {
             <div className={`line ${nav?'right':'left'}`}></div>
         </div>
         <div className="project-content">
-            {nav?<>
-            <img src={require('../assets/Floorplan-thumb-1.jpg')} alt="" />
-            </>:<> <img src={require('../assets/site-plan.jpg')} alt="" /></>}
+            {nav?
+            <> <img src={require('../assets/site-plan.jpg')} alt="" /></>
+            :
+            <img src={img?img:require('../assets/Floorplan-thumb-1.jpg')} alt="" />
+            }
         </div>
     </section>
   )

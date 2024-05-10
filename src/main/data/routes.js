@@ -8,6 +8,11 @@ export const routes = [
         path:'/product'
     },
     {
+        name:'Project',
+        // path:'/product'
+        dropdown: true
+    },
+    {
         name:'About',
         path:'/about'
     },
@@ -21,32 +26,10 @@ export const routes = [
     },
     {
         name:'Login',
-        dropdown:[
-            {
-                name:'Customer Login'
-            },
-            {
-                name:'Vendor Login'
-            },
-            {
-                name:'Vendor Registration'
-            }
-        ],
         path:'/login'
     },
     {
         name:"registration",
-        dropdown:[
-            {
-                name:'Customer Login'
-            },
-            {
-                name:'Vendor Login'
-            },
-            {
-                name:'Vendor Registration'
-            }
-        ],
         path:"registration"
     },
     {

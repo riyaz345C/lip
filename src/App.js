@@ -14,6 +14,7 @@ import About from './sabana/about/About';
 import Infra from './sabana/infra/Infra';
 import Vendorlogin from './sabana/vendorlogin/Vendorlogin';
 import AddForm from './adminPanel/UI-componets/addProject/AddForm';
+import { UpdateForm } from './adminPanel/UI-componets/updateProject/UpdateForm';
 
 // import Main from './slick/Main';
 
@@ -25,6 +26,7 @@ function App() {
       <Route exact path='' element={<Main/>} >
           <Route  path='' element={<Home/>}/>
           <Route path='product' element={<Product/>}/>
+          <Route path='project/:id' element={<Project/>}/>
           <Route path='contact' element={<Contact/>}/> 
           <Route path='login' element={<Login/>}/> 
           <Route path='registration' element={<Registration/>}/> 
@@ -37,6 +39,7 @@ function App() {
           <Route path='account' element={<Account/>}/>
           <Route path='add' element={<AddForm/>} />
           <Route path='project/:id' element={<Project/>}/>
+          <Route path='Update/:id' element={<UpdateForm/>}/>
       </Route>
     </Routes>
     </BrowserRouter>

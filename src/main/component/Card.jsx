@@ -1,15 +1,15 @@
 import React from 'react'
-import img from '../assets/hero.avif'
+import img1 from '../assets/hero.avif'
 import './card.css'
 import { BsFacebook,BsLinkedin } from "react-icons/bs";
 import { FaXTwitter } from "react-icons/fa6";
 
-function Card({title}) {
+function Card({title,img}) {
   return (
     <>
     <div className="primary-card">
         {/* <div className="img"></div> */}
-        <img src={img} alt="" />
+        <img src={img?img:img1} alt="" />
         <div className="price pr-color"><span>xxx$</span> onwards*</div>
         <h2 className='pr-color'>{title}</h2>
         <div className="content se-color">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio animi reiciendis totam sunt exercitationem corrupti repellat fugiat itaque, quaerat cupiditate necessitatibus omnis quae repudiandae voluptatum consequuntur in deserunt magni quam.</div>

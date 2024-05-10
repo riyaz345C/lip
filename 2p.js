@@ -27,4 +27,7 @@ const twoSum =(arr,target)=>{
     //     }
     // }
     return [arr,null]
+    function name(params) {
+        let x = [1,2,3]
+    }
 }

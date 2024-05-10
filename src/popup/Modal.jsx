@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import ReactDOM from 'react-dom'
+import popup from './lip-logo1.png'
 const style ={
     position:'fixed',
     left:'50%',
@@ -25,21 +26,9 @@ const overlay ={
 }
 const Modal = ({tog}) => {
     const [xe,setX] = useState(false)
+    const popupFormRef = useRef()
     console.log({tog:tog,xe:xe},'line1');
-    // useEffect(()=>{
-    //     function pop(){
-    //         if(tog){
-    //             let x = setTimeout(()=>{
-    //                 setX(!xe)
-    //                 console.log({tog:tog,xe:xe,},'line2');
-    //             console.log();
-    //         },1000)
-    //         console.log({tog:tog,xe:xe,},'line3');
-    //        console.log('tttttttttttttttttttttttttttttt');
-    //    }    
-    // }
-    //     return ()=>pop()
-    // },[tog,xe])
+   
     useEffect(() => {
         let timeoutId;
         console.log('u1');
@@ -49,35 +38,69 @@ const Modal = ({tog}) => {
                 console.log('u3');
                 timeoutId = setTimeout(() => {
                     setX(true); // No need to negate xe
-                    console.log('u4');
                 }, 1000);
             } else {
                 setX(false);
-                console.log('u5');
             }
         }
         
         pop();
-        console.log('u6');
-        
         return () => {
-            console.log('u7');
             clearTimeout(timeoutId); // Clear the timeout on unmount or dependency change
         };
-        console.log(xe);
     }, [tog]);
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        try {
+            let postData = {
+                Name:  popupFormRef.current.popupName.value,
+                Email:  popupFormRef.current.popupEmail.value,
+                Phone:  popupFormRef.current.popupPhone.value,
+            }
+            console.log(postData);
+        } catch (error) {
+            console.log(error);
+        }
+    }
   return ReactDOM.createPortal(
     
         <>
         <div style={{...overlay,opacity:xe?1:0}}></div>
-        <div className="modal" style={{...style,opacity:xe?1:0}}>
-            Enquire <button onClick={()=>tog(false)}>X</button>
+        <form ref={popupFormRef} className="modal" onSubmit={handleSubmit} style={{...style,opacity:xe?1:0}}>
+            {/* Enquire <button onClick={()=>tog(false)}>X</button> */}
+            {/* <input type="text" placeholder="enter" /><br />
             <input type="text" placeholder="enter" /><br />
             <input type="text" placeholder="enter" /><br />
-            <input type="text" placeholder="enter" /><br />
-            <input type="text" placeholder="enter" /><br />
+            <input type="text" placeholder="enter" /><br /> */}
+            <div className='enquire' style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'flex-end' }}>
+             Enquire<button onClick={()=>tog(false)}>X</button> </div>
+            <img
+                    src={popup}
+                    class="popup-logo"
+                    alt="popup-img"
+                    style={{
+                        display: 'block',
+                        margin: '0 auto',
+                        width: '45%',
+                        height: 'auto'
+                    }}
+                />
+
+            <input class="input-fieldr" type="text"  name='popupName'  placeholder="Enter your Name" /><br />
+            <input  class="input-fieldr" type="text"  name='popupPhone' placeholder="Enter your Phone Number" /><br />
+            <input class="input-fieldr" type="text"  name='popupEmail' placeholder="Enter your Email" /><br />
+            <button  type="submit" value="send" class="popupSubmit"   style={{
+                        backgroundColor: 'green',
+                        color: 'white',
+                        border: 'none',
+                        padding: '10px 20px',
+                        marginTop: '20px',
+                        cursor: 'pointer',
+                        display: 'block',
+                        margin: '0 auto'
+                             }}  >Submit</button>
     
-        </div>
+        </form>
         </>,
       document.getElementById('portal')
   )

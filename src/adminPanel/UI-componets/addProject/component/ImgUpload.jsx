@@ -11,10 +11,10 @@ function ImgUpload({label,inpRef}) {
   return (
     <>
     <div class={card.card}>
-  <div style={{ marginTop: '40px' }}>
+  <div style={{ marginTop: '10px' }}>
   <label htmlFor="fileInput">{label}</label>
   {/* <h4>Upload here</h4> */}
-    <img src={file} style={{ width: '100px', height: '100px' }} />
+    <img src={file} style={{ width: '100%', height: '100px' }} />
   </div>
   <input type="file" onChange={getFile} id="fileInput"
    style={{ marginBottom: '10px' }}  ref={inpRef} required />

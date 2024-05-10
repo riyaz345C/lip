@@ -85,7 +85,7 @@
      transition: all .3s ease;
  }
  .sidebar-open{
-    height: 100vh;  
+    height: calc(100vh - 80px);  
  }
  
 

@@ -5,36 +5,63 @@ import { Link } from 'react-router-dom'
 import Hamburger from 'hamburger-react'
 import { routes } from '../data/routes'
 import useFetch from '../../adminPanel/project/useFetch'
+import { MdOutlineArrowDropDown  } from "react-icons/md";
+import { MdArrowDropUp } from "react-icons/md";
 
-
-function Navbar() {
+function Navbar({projectData}) {
   const[visibility,setVisibility]=useState(false)
   const [isOpen, setOpen] = useState(false)
   const [dropDown,setDropDown] = useState(false)
-  const [load,error,projectData] = useFetch('http://localhost:4000/projects')
+  const [rotate,setRotate] = useState(false)
+  // const [load,error,projectData] = useFetch('http://localhost:4000/projects')
   // console.log(projectData);
   function handleClick(x){
     window.scrollTo({top:0,behavior:'smooth'})
     setVisibility(!visibility)
+    setDropDown(false)
     setOpen(false)
   }
   function handleClickX(x){
     window.scrollTo({top:0,behavior:'smooth'})
+  }
+  function handleToggle() {
+    setVisibility(!visibility)
+    setDropDown(false)
+  }
+  const handleEnter = (e) => {
+    // console.log('entered');
+    setRotate(true)
+  }
+  const handleLeave = (e) => {
+    console.log('leaved');
+    setRotate(false)
   }
 
   return (
     <>
     <nav className='lip-navbar'>
     <img src={logo} alt="Logo" />
-    <div className='lip-nav-links'>{routes.map((e,i)=>{
-      return(
-        <li key={i} onClick={handleClickX} > <Link to={e.path}>{e.name}
-        {e.dropdown?'/':''}
-        </Link></li>
-      )
+    <div className='lip-nav-links'>
+      {routes.map((e,i)=>{
+        return(
+          <li key={i} onClick={handleClickX} >
+          <Link to={e.path} onMouseEnter={e.dropdown&&handleEnter} onMouseLeave={e.dropdown&&handleLeave}>
+             {e.name} 
+            <div className="dropdown" style={{position:'fixed',height:'fit-content',backgroundColor:'#fff',}}>
+              {rotate&&e.dropdown&&projectData[0].projects.map((e,i)=>{
+                return(
+                  <Link to={`project/${e.projectName}`} onClick={handleLeave}
+                  style={{display:'block',fontSize:'15px',padding:'10px 20px',textDecoration:'none',color:'#222'}}>{e.projectName}</Link>
+                )
+              })}
+            </div>
+          </Link>
+          {e.dropdown && <MdOutlineArrowDropDown style={{transform: `rotate(${rotate?'180deg':'0deg'})`}}/> }
+          </li>
+        )
     })}</div>
      <div className="icon"><Hamburger className='icon' toggled={isOpen} toggle={setOpen}
-      onToggle={()=>setVisibility(!visibility)} duration={0.5} rounded  easing="ease" /></div>
+      onToggle={handleToggle} duration={0.5} rounded  easing="ease" /></div>
     </nav>
 
    <div className={`sidebar-container  ${ visibility?'open':'close'}`} key={'sidebarContainer'}>
@@ -42,27 +69,32 @@ function Navbar() {
     {routes.map((e,i)=>{
       return(
         <>
-        <li key={i*2}  > <Link to={e.path} onClick={handleClick}>
+        <li key={i*2}>
+          <Link to={e.path} onClick={handleClick} style={{textDecoration:'none',color:'#000'}}>
           {e.name}
-        </Link>
-          {e.name!=='Product'?''
-          : 
-          <>'\/'<button onClick={()=>setDropDown(prv=>prv=!prv)}>set</button>
-          {!dropDown ?<></>:<>
-         {projectData[0].projects.map((e,i)=>{
-          return(
-            <div>{e.projectName}</div>
-          )
-         })}
-          </>
-          }</>}
+          </Link>
+            {e.name!=='Product'?'': 
+              <> 
+                <button onClick={()=>setDropDown(prv=>prv=!prv)}>set</button>
+                {
+                  !dropDown ? <></> : 
+                  <div>
+                    {projectData[0].projects.map((e,i)=>{
+                      return(
+                        <Link to={`project/${e.projectName}`} onClick={handleClick}
+                         style={{display:'block',padding:'10px',textDecoration:'none',color:'#222'}}>{e.projectName}</Link>
+                      )
+                    })}
+                  </div>
+                }
+              </>
+            }
         </li>
-        {/* <li key={i} onClick={handleClick} > <Link to={e.path}>{e.name}</Link></li> */}
         </>
       )
     })}
-    </div>
-   </div>
+  </div>
+  </div>
     </>
   )
 }

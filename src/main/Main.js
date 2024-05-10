@@ -5,6 +5,7 @@ import { Outlet} from "react-router-dom";
 // import Product from './product/Product';
 import Navbar from './component/Navbar';
 import Footer from '../sabana/footer/Footer';
+import useFetch from '../adminPanel/project/useFetch';
 // import Contact from '../sabana/contact/Contact';
 // import Login from '../sabana/login/Login';
 // import Registration from '../sabana/registration/Registration';
@@ -18,11 +19,12 @@ import Footer from '../sabana/footer/Footer';
 function Main() {
   // const loc = useLocation();
   const [foot,setFoot] = useState(false)
+  const [load,error,projectData] = useFetch('http://localhost:4000/projects')
   // useEffect(()=>{},[])
   return (
     
     <>
-    <Navbar/>
+    <Navbar projectData={projectData}/>
     {/* <Routes>
       <Route  path='/' element={<Home/>}/>
       <Route path='/product' element={<Product/>}/>

@@ -80,7 +80,7 @@ border: '1px solid #bbb', padding: '12px 9px',width: '80%',margin:'0'}}/>
    <Headline span={`Project`} div={`Highlights`}/>
    <ProjectHighSliderv2 ammArray={projectData.projectsAmmenities}/>
    </section>
-   <ProductPlan/>
+   <ProductPlan img={api.get+'/'+projectData.projectPlan}/>
    <section className='section faq'>
       <Headline span={'Frequently Asked'} div={`Question`}/>
       {projectData.faq.map((e,i)=>{
