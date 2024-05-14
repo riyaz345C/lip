@@ -36,7 +36,7 @@ function Navbar({projectData}) {
     console.log('leaved');
     setRotate(false)
   }
-
+  console.log({projectData:projectData});
   return (
     <>
     <nav className='lip-navbar'>
@@ -48,12 +48,12 @@ function Navbar({projectData}) {
           <Link to={e.path} onMouseEnter={e.dropdown&&handleEnter} onMouseLeave={e.dropdown&&handleLeave}>
              {e.name} 
             <div className="dropdown" style={{position:'fixed',height:'fit-content',backgroundColor:'#fff',}}>
-              {rotate&&e.dropdown&&projectData[0].projects.map((e,i)=>{
+              {rotate && e.dropdown && (projectData?projectData[0].projects.map((e,i)=>{
                 return(
                   <Link to={`project/${e.projectName}`} onClick={handleLeave}
                   style={{display:'block',fontSize:'15px',padding:'10px 20px',textDecoration:'none',color:'#222'}}>{e.projectName}</Link>
                 )
-              })}
+              }):<>loading...</>)}
             </div>
           </Link>
           {e.dropdown && <MdOutlineArrowDropDown style={{transform: `rotate(${rotate?'180deg':'0deg'})`}}/> }
@@ -70,21 +70,24 @@ function Navbar({projectData}) {
       return(
         <>
         <li key={i*2}>
-          <Link to={e.path} onClick={handleClick} style={{textDecoration:'none',color:'#000'}}>
+          <Link to={e.path} onClick={()=>e.dropdown?setDropDown(prv=>prv=!prv):handleClick} style={{textDecoration:'none',color:'#000'}}>
           {e.name}
           </Link>
-            {e.name!=='Product'?'': 
+            {e.name!=='Projects'?'': 
               <> 
-                <button onClick={()=>setDropDown(prv=>prv=!prv)}>set</button>
+                {/* <button onClick={()=>setDropDown(prv=>prv=!prv)}>set</button> */}
+                {e.dropdown && <MdOutlineArrowDropDown onClick={()=>setDropDown(prv=>prv=!prv)}
+                 style={{transform: `rotate(${dropDown?'180deg':'0deg'})`}} 
+                /> }
                 {
                   !dropDown ? <></> : 
                   <div>
-                    {projectData[0].projects.map((e,i)=>{
+                    {projectData?projectData[0].projects.map((e,i)=>{
                       return(
                         <Link to={`project/${e.projectName}`} onClick={handleClick}
                          style={{display:'block',padding:'10px',textDecoration:'none',color:'#222'}}>{e.projectName}</Link>
                       )
-                    })}
+                    }):<>loading...</>}
                   </div>
                 }
               </>

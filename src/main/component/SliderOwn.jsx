@@ -24,31 +24,38 @@ function SliderOwn() {
         infinite: true,
         speed: 500,
         // slidesToShow: ((width<800)? 1 : ((width<888)? 2 : 3) ),  
-        slidesToShow: ((3) ),  
-        slidesToScroll: 1,
+        slidesToShow: 3,  
+        slidesToScroll: 0,
         autoplay:true,
         autoplaySpeed:2000,
         pauseOnHover:true,
         responsive:[
-          {
-            breakpoint:890,
-            settings:{
-              slidesToShow:2
-            }
-          },{
-          breakpoint:800,
-          settings:{
-            slidesToShow:1
-          }
-        },
+        //   {
+        //     breakpoint:890,
+        //     settings:{
+        //       slidesToShow:1
+        //     }
+        //   },
+        //   {
+        //   breakpoint:800,
+        //   settings:{
+        //     slidesToShow:1
+        //   }
+        // },
       ]
       };
+      // const dataFetchedx = [{projects:[
+      //   {projectName:"Ina Richard"},
+      //   {projectName:"Ina Richard"},
+      //   {projectName:"Ina Richard"},
+      //   {projectName:"Ina Richard"},
+      // ]}]
   return (
     <>
     <Slider {...settings}>
       {dataFetched?dataFetched[0].projects.map((e,i)=>{
         return(
-          <Card title={e.projectName} key={i}/>
+            <Card title={e.projectName+i} key={i}/>
         )
       }):<>loading...</>}
     </Slider>

@@ -8,7 +8,7 @@ export const routes = [
         path:'/product'
     },
     {
-        name:'Project',
+        name:'Projects',
         // path:'/product'
         dropdown: true
     },

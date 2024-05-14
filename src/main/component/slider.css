@@ -12,6 +12,9 @@
     overflow: hidden;
     /* padding: 0 4vw; */
 }
+.slick-track{
+    width: max-content;
+}
 /* .slick-list{
     width: max-content !important;
 } */
