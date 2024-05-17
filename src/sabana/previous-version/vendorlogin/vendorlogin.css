@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+
+.banner12 {
+    height: 600px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Raleway', sans-serif;
+    color: #666;
+    margin: 0;
+    padding: 0;
+    background-image: url("login-bgg.jpg");
+}
+
+.vendor-bg {
+    width: 200px;
+    height: 120px;
+    margin-left: 35px;
+}
+
+.customer12 {
+    margin: 0px;
+    margin-bottom: 10px;
+}
+
+.minifooter {
+    background-color: #81605e;
+    /* height: 41px; */
+    color: white;
+    text-align: center;
+    margin: 0%;
+}
+
+.copy {
+    margin: 0px;
+    padding: 6px;
+}
+
+.name {
+    width: 200px;
+}
+
+.vendor1 {
+    margin: 20px auto;
+    padding: 10px 20px;
+    max-width: 350px;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 1px 1px 1px #666;
+}
+
+.vendor1 input {
+    width: 300px;
+    display: block;
+    box-sizing: border-box;
+    margin: 10px 0;
+    padding: 14px 12px;
+    font-size: 16px;
+    border-radius: 2px;
+    font-family: Raleway, sans-serif;
+}
+
+.vendor1 input[type=text]:focus,
+.vendor1 input[type=password]:focus {
+    background-color: #f5f5dc;
+}
+
+.vendor1 h2 {
+    margin: 20px 0 0;
+    color: #EF5350;
+    font-size: 28px;
+}
+
+.vendor1 p {
+    margin-bottom: 40px;
+}
+
+.vendorlinks1 {
+    display: table;
+    width: 100%;
+    box-sizing: border-box;
+    border-top: 1px solid #c0c0c0;
+    margin-bottom: 10px;
+}
+
+.vendorlinks1 a {
+    display: table-cell;
+    padding-top: 10px;
+}
+
+.vendorlinks1 a:first-child {
+    text-align: left;
+}
+
+.vendorlinks1 a:last-child {
+    text-align: right;
+}
+
+.login h2,
+.login p,
+.login a {
+    text-align: center;
+}
+
+.login a {
+    text-decoration: none;
+    font-size: .8em;
+}
+
+.login a:visited {
+    color: inherit;
+}
+
+.login a:hover {
+    text-decoration: underline;
+}
+
+.vendor-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #a54141;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 12px;
+    width: 100%;
+}
+
+.vendor-btn:hover {
+    background-color: #f0683f;
+}
+
+.login-link {
+    text-decoration: none;
+}
+
+.vendorlinks1 a{
+  text-decoration: none;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .login input[type=text],
+    .login input[type=password] {
+        width: 80%;
+    }
+
+    .vendor-btn {
+        width: 71%;
+        margin-left: 33px;
+    }
+}
+
+@media only screen and (max-width: 400) {
+.login1 {
+  
+    max-width: 300px;
+    
+  
+   }
+}

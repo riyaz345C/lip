@@ -1,4 +1,3 @@
-// import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Main from './main/Main';
 import AdminLogin from './adminPanel/AdminLogin';
@@ -13,6 +12,7 @@ import Registration from './sabana/registration/Registration';
 import About from './sabana/about/About';
 import Infra from './sabana/infra/Infra';
 import Vendorlogin from './sabana/vendorlogin/Vendorlogin';
+import Gallery from './sabana/gallery/Gallery';
 import AddForm from './adminPanel/UI-componets/addProject/AddForm';
 import { UpdateForm } from './adminPanel/UI-componets/updateProject/UpdateForm';
 
@@ -33,6 +33,7 @@ function App() {
           <Route path='about' element={<About/>}/> 
           <Route path='infra' element={<Infra/>}/> 
           <Route path='vendorlogin' element={<Vendorlogin/>}/>  
+          <Route path='gallery' element={<Gallery/>}/>
       </Route>
       <Route path='admin' element={<AdminRoutes/>}>
           <Route path='' element={<AdminLogin/>}/>

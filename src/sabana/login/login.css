@@ -15,9 +15,9 @@
 }
 
 .login-bg {
-    width: 200px;
-    height: 120px;
-    margin-left: 35px;
+    width: 140px;
+    height: 80px;
+    margin-left: 78px;
 }
 
 .customer1 {
@@ -75,8 +75,13 @@
 }
 
 .login1 p {
-    margin-bottom: 40px;
+    margin-bottom: 15px;
 }
+/* .email-input {
+    
+    color: #333;
+} */
+
 
 .links1 {
     display: table;
@@ -148,12 +153,19 @@
 
 @media only screen and (max-width: 768px) {
     .login1 input[type=text],
+    .login1 input[type=email],
+
     .login1 input[type=password] {
         width: 80%;
+        /* text-align: center; */
+        display: flex;
+        align-items: center;
+        margin-left: 33px;
     }
 
     .login-btn {
         width: 80%;
         margin-left: 33px;
     }
+   
 }

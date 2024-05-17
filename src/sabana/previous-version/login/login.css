@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+
+.banner1 {
+    height: 600px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Raleway', sans-serif;
+    color: #666;
+    margin: 0;
+    padding: 0;
+    background-image: url("login-bgg.jpg");
+}
+
+.login-bg {
+    width: 200px;
+    height: 120px;
+    margin-left: 35px;
+}
+
+.customer1 {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.minifooter {
+    background-color: #81605e;
+    /* height: 41px; */
+    color: white;
+    text-align: center;
+    margin: 0%;
+}
+
+.copy {
+    margin: 0;
+    padding: 6px;
+}
+
+.name {
+    width: 200px;
+}
+
+.login1 {
+    margin: 20px auto;
+    padding: 10px 20px;
+    /* max-width: 350px; */
+    width: 350px;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 1px 1px 1px #666;
+}
+
+.login1 input {
+    width: 300px;
+    display: block;
+    box-sizing: border-box;
+    margin: 10px 0;
+    padding: 14px 12px;
+    font-size: 16px;
+    border-radius: 2px;
+    font-family: Raleway, sans-serif;
+}
+
+.login1 input[type=text]:focus,
+.login1 input[type=password]:focus {
+    background-color: #f5f5dc;
+}
+
+.login1 h2 {
+    margin: 20px 0 0;
+    color: #EF5350;
+    font-size: 28px;
+}
+
+.login1 p {
+    margin-bottom: 40px;
+}
+
+.links1 {
+    display: table;
+    width: 100%;
+    box-sizing: border-box;
+    border-top: 1px solid #c0c0c0;
+    margin-bottom: 10px;
+}
+
+.links1 a {
+    display: table-cell;
+    padding-top: 10px;
+}
+
+.links1 a:first-child {
+    text-align: left;
+}
+
+.links1 a:last-child {
+    text-align: right;
+}
+
+.login1 h2,
+.login1 p,
+.login1 a {
+    text-align: center;
+}
+
+.login1 a {
+    text-decoration: none;
+    font-size: .8em;
+}
+
+.login1 a:visited {
+    color: inherit;
+}
+
+.login1 a:hover {
+    text-decoration: underline;
+}
+
+.login-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #a54141;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 12px;
+    width: 100%;
+}
+
+.login-btn:hover {
+    background-color: #f0683f;
+}
+
+.login-link {
+    text-decoration: none;
+}
+
+.links1 a{
+  text-decoration: none;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .login1 input[type=text],
+    .login1 input[type=password] {
+        width: 80%;
+    }
+
+    .login-btn {
+        width: 80%;
+        margin-left: 33px;
+    }
+}

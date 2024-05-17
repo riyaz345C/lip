@@ -1,34 +1,59 @@
-import React from "react";
+// import React from "react";
+import React, { useRef, useState } from "react";
+
 import './vendorlogin.css';
 import login from './lip-logo.png';
+import useFormPost from "../useFormPost";
+import Loader from "../../main/assets/Loader";
 // import bg from './login-bgg.jpg';
 
 
 const Vendorlogin = () => {
+    const [formInfo, setFormInfo] = useState('');
+    const formv = useRef();
+    const [mailSend,loading,state] = useFormPost()
+    const FormData = (e) => {
+      e.preventDefault();
+      const postData ={
+         vname: formv.current.vname.value,
+         vphone: formv.current.vphone.value,
+         vemail: formv.current.vemail.value,
+         vcity: formv.current.vcity.value,
+        
+      }
+      mailSend(postData,formv)
+      setFormInfo(postData);
+
+    }
+    console.log(formInfo);
     return(
         <>
 
+<div class="banner1">
+    <form action=""  ref={formv}  onSubmit={FormData}   class="login1">
+        <img src={login} class="login-bg" alt="login-img" />
+        <p class="customer1">Vendor Registration</p>
+        <input type="text"   name="vname"   placeholder=" Name" class="input-fieldr" />
+        <input type="text"   name="vphone"   placeholder="Phone Number"  class="input-fieldr" />
+        <input type="email"   name="vemail"   placeholder=" Email"  class="input-fieldr" />
+        <input type="text"   name="vcity"    placeholder="City"  class="input-fieldr" />
+        
+      
 
-
-<div class="banner12">
-    <form class="vendor1">
-        <img src={login} class="vendor-bg" alt="login-img" />
-        <p class="customer12">Vendor Login</p>
-        <input type="text" placeholder="Mail id (or)Mobile Number" class="mailidvendor" />
-        <input type="password" placeholder="Password"  class="passwdvendor" />
-        <a href="#" class="vendor-link">
-            <button class="vendor-btn">Sign in</button>
-        </a>
-        <div class="vendorlinks1">
-            <a href="#">Forgot password</a>
-        </div>
+            <button type="submit" value="send" class="login-btn">
+            {loading?<Loader size={25} color={'#fff'}/>:<>
+         {state.message&&'Retry'||'Submitted'}
+         </>}
+            </button>
+           
     </form>
 </div>
+
 <div className="minifooter">
   <p className="copy">
   Copyright © 2023 VGN Projects Estates Pvt Ltd, All Rights Reserved
   </p>
-</div>
+</div> 
         </>
     )
 }

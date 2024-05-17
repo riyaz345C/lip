@@ -24,6 +24,7 @@ function FechHook(box
     ) {
         const nav =useNavigate()
         const params = useParams()
+        const [lod,setload] = useState(false)
         const [fetchData,setFetchData] = useState([])
         let value = (x) => {return x.current.value}
         let logg = async() =>{
@@ -75,31 +76,36 @@ function FechHook(box
             console.log(postData);
             let postDat
             if(method === 'ADD'){
-                 postDat = await axios.post(`${api.protected}?projectname=${postData.projectName}`,fileData,{
+                setload(true)
+                postDat = await axios.post(`${api.protected}?projectname=${postData.projectName}`,fileData,{
                     headers:{Authorization:`bearer ${localStorage.getItem('lipToken')}`}
                 })
             } else if(method === 'UPDATE'){
+                setload(true)
                 console.log(postData);
-                 postDat = await axios.put(`${api.update}?projectname=${params.id}`,fileData,{
+                postDat = await axios.put(`${api.update}?projectname=${params.id}`,fileData,{
                     headers:{Authorization:`bearer ${localStorage.getItem('lipToken')}`}
                 })
             }
-
-                setFetchData(postDat)
-                formRef.current.reset()
-                nav('/admin/account')
-                console.log('p');
+            
+            setFetchData(postDat)
+            formRef.current.reset()
+            nav('/admin/account')
+            console.log('p');
         } catch (error) {
             setFetchData(error)
             console.log(error);
         }    
+        finally{
+            setload(false)
+        }
         }
         const onSubmit = (e) => {
             e.preventDefault()
             console.log(e);
             logg()
         }
-        return [onSubmit,fetchData]
+        return [onSubmit,fetchData,lod]
 }
 
 export default FechHook

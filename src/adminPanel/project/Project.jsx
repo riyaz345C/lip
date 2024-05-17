@@ -1,5 +1,4 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
 import useFetch from './useFetch'
 import ProductInfo from './components/ProductInfo';
 import Headline from '../../main/product/Headline';
@@ -8,6 +7,8 @@ import ProjectHighSliderv2 from './components/ProjectHighSliderv2';
 import ProductPlan from '../../main/product/ProductPlan';
 import Faq from '../../main/component/FAQ/Faq';
 import { api } from '../api';
+import Example from '../../main/assets/Loader';
+import img from '../../main/assets/main.avif'
 
 let x = ['Overview', 'Location', 'Amenities','Specifications', 'Project', 'Plans' ,'FAQ’s']
 
@@ -18,12 +19,15 @@ function Project() {
   //   const {projectName,subTitle,box} = projectData
   // }
   const srt = (x) => {return projectData.x}
-  if(load || !projectData) return (<>loading ....</>)
+  if(load || !projectData) return (<div style={{width:'100%',height:'200px'
+  ,display:'flex',alignItems:'center',justifyContent:'center'}}>
+    <Example/>
+  </div>)
   return (
     <>
     <section className='product-section-1'> 
     <div className="img">
-      <img src={`https://www.vgn.in/asset/img/banners/project-banner.jpg`} alt="" />
+      <img src={img||`https://www.vgn.in/asset/img/banners/project-banner.jpg`} alt="" />
     </div>
     <div className="product-info">
     <ProductInfo projectName={projectData.projectName} 

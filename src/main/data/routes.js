@@ -3,9 +3,13 @@ export const routes = [
         name:'Home',
         path:'/'
     },
+    // {
+    //     name:'Product',
+    //     path:'/product'
+    // },
     {
-        name:'Product',
-        path:'/product'
+        name:'About',
+        path:'/about'
     },
     {
         name:'Projects',
@@ -13,29 +17,38 @@ export const routes = [
         dropdown: true
     },
     {
-        name:'About',
-        path:'/about'
-    },
-    {
-        name:'Contact Us',
-        path:'/contact'
-    },
-    {
         name:'LIP Infra',
         path:'/infra'
     },
     {
-        name:'Login',
-        path:'/login'
+        name:'Gallery',
+        path:'/gallery'
     },
+    
     {
-        name:"registration",
-        path:"registration"
+        name:'Contact Us',
+        path:'/contact'
     },
+   
     {
-        name:"vendorlogin",
-        path:"vendorlogin"
-    }
+        name:'Logins',
+        // path:'/login'
+        dropdown: true,
+        paths:[
+            {
+                name:"Registration",
+                path:"registration"
+            },
+            {
+                name:"Vendorlogin",
+                path:"vendorlogin"
+            },
+            {
+                name:'Login',
+                path:'login'
+            }
+        ],
+    },
 ]
 
 

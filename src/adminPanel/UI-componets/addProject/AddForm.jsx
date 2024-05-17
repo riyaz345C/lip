@@ -9,6 +9,7 @@ import Box from './component/Box'
 import Faq from './component/Faq'
 import Points from './component/Points'
 import ImgUpload from './component/ImgUpload'
+import Example from '../../../main/assets/Loader'
 
 function AddForm() {
     // single field
@@ -38,7 +39,7 @@ function AddForm() {
         removeQuestion,addAmenities,removeAmenities,
         addPoint,removePoint] = Statehook(amenitiesImgUrlRef)
     // custom hook for get data from form and fetch it
-    const [onSubmit,fetchData] = FechHook(
+    const [onSubmit,fetchData,lod] = FechHook(
         box,projectRef,subTitleRef,projectOverviewRef
         ,locationRef,projectPlanRef,points,amenities
         ,faq,questionRefs,answerRefs,pointsRefs,boxHeadsRefs
@@ -127,7 +128,7 @@ function AddForm() {
         </div>
 
         {/* submit btn */}
-       <input type="submit"  className={sty.btn}  value="submit" onClick={(e)=>{}}/> 
+       <input type="submit"  className={sty.btn}  value={lod?<Example/>:'submit'} onClick={(e)=>{}}/> 
 
     </form>
     </>

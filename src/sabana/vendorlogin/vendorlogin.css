@@ -15,9 +15,9 @@
 }
 
 .vendor-bg {
-    width: 200px;
-    height: 120px;
-    margin-left: 35px;
+    width: 140px;
+    height: 80px;
+    margin-left: 78px;
 }
 
 .customer12 {
@@ -55,7 +55,7 @@
     width: 300px;
     display: block;
     box-sizing: border-box;
-    margin: 10px 0;
+    margin: 18px 5px 14px;
     padding: 14px 12px;
     font-size: 16px;
     border-radius: 2px;
@@ -74,7 +74,8 @@
 }
 
 .vendor1 p {
-    margin-bottom: 40px;
+    /* margin-bottom: 40px; */
+    text-align: center;
 }
 
 .vendorlinks1 {

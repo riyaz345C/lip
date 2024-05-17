@@ -1,12 +1,12 @@
 import React from "react";
 import './infra.css';
-import about from './contact-bg.jpg';
+import about from './scheme.jpg';
 import { FaAngleDoubleRight } from "react-icons/fa";
 // import Roadcard from './Roadcard'
 import road1 from './road1.jpg'
+import SliderOwn from "../../main/component/SliderOwn";
 import { FaAlignCenter, FaAngleRight } from "react-icons/fa";
 import Tslider from "../../main/testimonial/Tslider";
-import SliderOwn from "../../main/component/SliderOwn";
 import ProjectHighSlider from "../../main/component/Projecthighlight/ProjectHighSlider";
 
 
@@ -19,7 +19,7 @@ const Infra = () => {
       <div className="home">Home</div>
       <FaAngleDoubleRight className='doubearrow' />
    </div>
-   <div className="contact">LIP Infra</div>
+   <div className="contact">LIP Scheme</div>
 </div>
 <div className="infrabox">
 
@@ -29,33 +29,30 @@ const Infra = () => {
          <p>Home</p>
       </a>
       <FaAngleRight className='singlearrow'   />
-      <p>  Infra</p>
+      <p>  Scheme</p>
    </div>
 </div>
 
 {/*************************** box ************/}
 <div class="rectangle-box">
-
-  <a href="#roads"  class="v1">Roads</a>
-  <a href="#bridges" class="v2">Bridges</a>
-  <a href="#residential" class="v3">Residential Buildings</a>
-
-</div>
+      <a href="#roads"  class="v1">Kodaikanal</a>
+      <a href="#bridges" class="v2">Courtrallam</a>
+      <a href="#residential" class="v3">Ecr</a>
+      <a href="#fourth" class="v3">Ulundurpet</a>
+   </div>
 
 {/************************** box end************/}
 
 <h2 className="infra-title">
-<span>LIP  </span> Infra 
+<span>LIP  </span> Scheme 
     </h2>
 
     <p className="about-whovr">
-The VGN Group is one of Chennai's leading property developers, with over eight decades of expertise in residential buildings and plotted developments in Chennai. Instituted in 1947, the company has developed many landmark buildings and transformed the skyline of Chennai. 
+    LIP innovative scheme offers unparalleled opportunities for investors, providing access to prime real estate with flexible financing options and attractive returns. Join LIP today and unlock the potential for secure and rewarding investments in the property market.
 </p>
 <br />
 
-<p className="about-whovr">
-The VGN Group is one of Chennai's leading property developers, with over eight decades of expertise in residential buildings and plotted developments in Chennai. Instituted in 1947, the company has developed many landmark buildings and transformed the skyline of Chennai. VGN has successfully carved a niche for itself in the ever-dynamic real estate industry over the last 83 years. Since its inception, VGN has completed 250+ buildings, amounting to over 20 million sq. ft. 
-</p>
+
 
 
 </div>
@@ -64,7 +61,7 @@ The VGN Group is one of Chennai's leading property developers, with over eight d
 
 <div className="road-project"  id="roads">
 <h2 className="infra-title  form"   >
-<span >Road  </span> Projects 
+<span >Kodaikanal  </span> Projects 
     </h2>
 
     <p className="about-whovr">
@@ -104,23 +101,47 @@ The VGN Group is one of Chennai's leading property developers, with over eight d
 <br /><br />
 <div className="bridge">
 <h2 className="infra-title" id="bridges">
-<span>Bridge   </span> Projects 
+<span>Courtrallam   </span> Projects 
     </h2>
-    <ProjectHighSlider/>
-</div>
-
-    <p className="about-whovr">
+     <p className="about-whovr">
     Our infrastructure development prowess extends to bridges, connecting communities across Tamil Nadu's diverse landscapes, keeping traffic flowing and fostering economic growth
-
    </p>
 
+    <div className="card-full">
+   <div className="card1">
+      <img src={road1}   className="roadimg1" alt="Description of my image" />   
+      <div className="card-body">
+        <h5 className="card-title">Card Title</h5>
+        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+    </div>
+
+    <div className="card1">
+      <img src={road1}   className="roadimg1" alt="Description of my image" />   
+      <div className="card-body">
+        <h5 className="card-title">Card Title</h5>
+        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+    </div>
+
+    <div className="card1">
+      <img src={road1}   className="roadimg1" alt="Description of my image" />   
+      <div className="card-body">
+        <h5 className="card-title">Card Title</h5>
+        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+    </div>
+    </div>
+</div>
+
+   
 
    
 
 
    <br /><br />
 <h2 className="infra-title" id="residential">
-<span>Residential   </span>  Buildings 
+<span>Ecr   </span>  Buildings 
     </h2>
 
     <p className="about-whovr">
@@ -154,62 +175,16 @@ The VGN Group is one of Chennai's leading property developers, with over eight d
     </div>
 <br /><br />
 
-    <div className="card-full">
-   <div className="card1">
-      <img src={road1}   className="roadimg1" alt="Description of my image" />   
-      <div className="card-body">
-        <h5 className="card-title">Card Title</h5>
-        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      </div>
-    </div>
+  
 
-    <div className="card1">
-      <img src={road1}   className="roadimg1" alt="Description of my image" />   
-      <div className="card-body">
-        <h5 className="card-title">Card Title</h5>
-        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      </div>
-    </div>
+<h2 className="infra-title" id="fourth">
+<span>Ulundurpet   </span>  Buildings 
+    </h2>
 
-    <div className="card1">
-      <img src={road1}   className="roadimg1" alt="Description of my image" />   
-      <div className="card-body">
-        <h5 className="card-title">Card Title</h5>
-        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      </div>
-    </div>
-
-    </div>
-<br /><br />
-
-    <div className="card-full">
-   <div className="card1">
-      <img src={road1}   className="roadimg1" alt="Description of my image" />   
-      <div className="card-body">
-        <h5 className="card-title">Card Title</h5>
-        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      </div>
-    </div>
-
-    <div className="card1">
-      <img src={road1}   className="roadimg1" alt="Description of my image" />   
-      <div className="card-body">
-        <h5 className="card-title">Card Title</h5>
-        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      </div>
-    </div>
-
-    <div className="card1">
-      <img src={road1}   className="roadimg1" alt="Description of my image" />   
-      <div className="card-body">
-        <h5 className="card-title">Card Title</h5>
-        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      </div>
-    </div>
-
-
-    </div>
-<br /> <br />
+    <p className="about-whovr">
+    Focused on creating secure and amenity-rich communities that cater to modern lifestyles, offering a variety of options, from spacious & thoughtfully designed apartments.
+    </p>
+<br />
     <div className="card-full">
    <div className="card1">
       <img src={road1}   className="roadimg1" alt="Description of my image" />   
@@ -235,6 +210,9 @@ The VGN Group is one of Chennai's leading property developers, with over eight d
       </div>
     </div>
     </div>
+
+   
+
 
     <br /><br />
 <div className="infra">

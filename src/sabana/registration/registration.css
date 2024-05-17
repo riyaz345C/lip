@@ -48,7 +48,7 @@ body, html {
 }
 
 
- input[type=text],  input[type=password] {
+ /* input[type=text],  input[type=password] {
   width: 100%;
   padding: 15px;
   margin: 5px 0 22px 0;
@@ -59,10 +59,25 @@ body, html {
  input[type=text]:focus,  input[type=password]:focus {
   background-color: #ffffff;
   outline: none;
+} */
+
+
+
+.input-fieldr {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f5f5dc;
+}
+
+.input-fieldr:focus {
+  background-color: #ffffff;
+  outline: none;
 }
 
 .btn {
-  background-color: #04AA6D;
+  background-color: #a54141;
   color: white;
   padding: 10px 0px;
   border: none;
@@ -141,13 +156,16 @@ body, html {
 
    input[type=text],  input[type=password] {
     width: 70%;
-    /* padding: 15px; */
-    /* margin: 5px 0 22px 0; */
+    
     border: none;
     background: #f5f5dc;
     margin-left: 35px;
 
   }
+
+
+  /* padding: 15px; */
+    /* margin: 5px 0 22px 0; */
   .btn {
     background-color: #04AA6D;
     color: white;
@@ -180,6 +198,25 @@ body, html {
 }
 
 
+.select select {
+  width: 275px; 
+  padding: 10px; 
+  font-size: 16px;
+  border: none;
+  color: #333;
+  background-color: #f5f5dc;
+
+}
+
+
+
+@media only screen and (max-width: 768px) {
+  .select select {
+    width: 90%; 
+    /* margin-right: 50px; */
+  }
+ 
+}
 
 
 

@@ -18,7 +18,7 @@
     display: flex;
     flex-flow: column;
     /* width: 33%; */
-   /* max-width: 100%; */
+   max-width: 450px;
    min-width: 275px;
    gap: 5px;
    box-shadow: var(--card-shadow);

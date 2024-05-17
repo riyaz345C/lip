@@ -9,6 +9,7 @@ import { dataFields } from '../addProject/datafields'
 import FechHook from '../addProject/stateHook/FechHook'
 import { api } from '../../api'
 import { useUpdate } from './customHooks/useUpdate'
+import Example from '../../../main/assets/Loader'
 let x=0
 export const UpdateForm = () => {
     // fetch particular project data : use '/projects/project_name -completed
@@ -52,7 +53,7 @@ export const UpdateForm = () => {
         load,error,projectData,setBox] = useUpdate(amenitiesImgUrlRef,api.projects)
         console.log(projectData);
         // custom hook for get data from form and fetch it
-        const [onSubmit,fetchData] = FechHook(
+        const [onSubmit,fetchData,lod] = FechHook(
             box,projectRef,subTitleRef,projectOverviewRef
             ,locationRef,projectPlanRef,points,amenities
             ,faq,questionRefs,answerRefs,pointsRefs,boxHeadsRefs
@@ -123,8 +124,7 @@ export const UpdateForm = () => {
             total : {faq.length}
             <Faq faqArray={faq} set={setFaq} update={true} questionRefs={questionRefs} answerRefs={answerRefs} />
         </div>
-       <input type="submit" value="submit" onClick={(e)=>{}}/> 
-
+       <input type="submit" value={lod?<Example/>:'submit'} onClick={(e)=>{}}/> 
     </form>
     </>
    )

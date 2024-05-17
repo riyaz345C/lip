@@ -47,20 +47,21 @@ function AdminLogin() {
       navigate('/admin/account')
     } 
   } catch (error) {
-    // setData({message:error.response.data,color:'red'})
-    // console.log(error.response.status , error.response.data.message);
     if (error.response) {
       // The request was made and the server responded with a status code
       setData({ message: error.response.data.message, color: "red" });
       console.log(error.response.status, error.response.data.message);
+
     } else if (error.request) {
       // The request was made but no response was received
       setData({ message: "Connection refused.", color: "red" });
       console.log("Connection refused.");
+
     } else {
       // Something happened in setting up the request that triggered an error
       setData({ message: "Error: " + error.message, color: "red" });
       console.error("Error: ", error.message);
+      
     }
     }
   }

@@ -20,7 +20,7 @@
 } */
 
 .infra-whovr{
-padding-top: 35px;
+/* padding-top: 35px; */
     font-family: 'Poppins', sans-serif;
     font-size: 17px;
     font-weight: 300;
@@ -44,11 +44,11 @@ padding-top: 35px;
     justify-content:center;
     align-items: center;
     height: 200px;
-    /* background-color: #2929e0; */
+    
 }
 
 .rectangle-box > a {
-    width: 300px;
+    width: 200px;
     height: 50px;
     display: flex;
     justify-content: center;

@@ -1,68 +1,49 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import './login.css';
 import login from './lip-logo.png';
-import bg from './login-bgg.jpg';
+import useFormPost from "../useFormPost";
+import Loader from "../../main/assets/Loader";
+
 
 
 const Login = () => {
+    const [formInfo, setFormInfo] = useState('');
+    const form = useRef();
+  const [emailSend,loading,state] = useFormPost()
+    const FormData = (e) => {
+      e.preventDefault();
+      const postData ={
+        cname: form.current.cname.value,
+        cphone: form.current.cphone.value,
+        cemail: form.current.cemail.value,
+        ccity: form.current.ccity.value,
+      }
+      emailSend(postData,form)
+      setFormInfo(postData);
+    }
+    console.log(formInfo);
     return(
         <>
 
-{/* <div className="banner1">
-
-    
-<form class="login1">
-<img src={login} class="login-bg" alt="login-img" />
-
-  <p className="customer1">Customer Login</p>
-  <input type="text" placeholder="Mail id (or)Mobile Number" className="mailid" />
-  <input type="password" placeholder="Password"  className="passwd" />
-  
-
-
-   <a href="#" class="login-link">
-  <button class="login-btn">Login</button>
-</a>
-
-
-  <div class="links1">
-    <a href="#">Forgot password</a>
-  </div>
-</form>
-
-       
-</div>
- */}
-
-
-
-
-
-
-
 <div class="banner1">
-    <form class="login1">
+    <form action=""  ref={form}  onSubmit={FormData}   class="login1">
         <img src={login} class="login-bg" alt="login-img" />
-        <p class="customer1">Customer Login</p>
-        <input type="text" placeholder="Mail id (or)Mobile Number" class="mailidvendor" />
-        <input type="password" placeholder="Password"  class="passwdvendor" />
-        <a href="#" class="login-link">
-            <button class="login-btn">Sign in</button>
-        </a>
-        <div class="links1">
-            <a href="#">Forgot password</a>
-        </div>
+        <p class="customer1">Customer Registration</p>
+        <input type="text"   name="cname"   placeholder=" Name" class="input-fieldr" />
+        <input type="text"   name="cphone"   placeholder="Phone Number"  class="input-fieldr" />
+        <input type="email"   name="cemail"   placeholder=" Email"  class="input-fieldr" />
+        <input type="text"   name="ccity"    placeholder="City"  class="input-fieldr" />
+        
+      
+
+            <button type="submit" value="send" class="login-btn">
+            {loading?<Loader size={25} color={'#fff'}/>:<>
+         {state.message&&'Retry'||'Submitted'}
+         </>}
+            </button>
+           
     </form>
 </div>
-
-
-
-
-
-
-
-
-
 
 <div className="minifooter">
   <p className="copy">

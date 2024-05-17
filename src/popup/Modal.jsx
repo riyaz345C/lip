@@ -1,6 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react'
 import ReactDOM from 'react-dom'
 import popup from './lip-logo1.png'
+import axios from 'axios'
+import { api } from '../adminPanel/api'
+import Example from '../main/assets/Loader'
+import useMailSend from './useMailSend'
 const style ={
     position:'fixed',
     left:'50%',
@@ -27,15 +31,14 @@ const overlay ={
 const Modal = ({tog}) => {
     const [xe,setX] = useState(false)
     const popupFormRef = useRef()
-    console.log({tog:tog,xe:xe},'line1');
-   
+    const [loading,setloading]=useState(false)   
     useEffect(() => {
         let timeoutId;
-        console.log('u1');
+        // console.log('u1');
         function pop() {
-            console.log('u2');
+            // console.log('u2');
             if (tog) {
-                console.log('u3');
+                // console.log('u3');
                 timeoutId = setTimeout(() => {
                     setX(true); // No need to negate xe
                 }, 1000);
@@ -49,19 +52,26 @@ const Modal = ({tog}) => {
             clearTimeout(timeoutId); // Clear the timeout on unmount or dependency change
         };
     }, [tog]);
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        try {
-            let postData = {
-                Name:  popupFormRef.current.popupName.value,
-                Email:  popupFormRef.current.popupEmail.value,
-                Phone:  popupFormRef.current.popupPhone.value,
-            }
-            console.log(postData);
-        } catch (error) {
-            console.log(error);
-        }
-    }
+    const [handleSubmit,] = useMailSend(popupFormRef,setloading,'popup')
+    // const handleSubmit = async(e) => {
+    //     e.preventDefault()
+    //     try {
+    //         let postData = {
+    //             Name:  popupFormRef.current.popupName.value,
+    //             Email:  popupFormRef.current.popupEmail.value,
+    //             Phone:  popupFormRef.current.popupPhone.value,
+    //         }
+    //         setloading(true)
+    //         const submitData = await axios.post(api.sendmail,postData)
+    //         console.log(submitData);
+    //         console.log(postData);
+    //     } catch (error) {
+    //         console.log(error);
+    //     } finally{
+    //         popupFormRef.current.reset()
+    //         setloading(false)
+    //     }
+    // }
   return ReactDOM.createPortal(
     
         <>
@@ -98,7 +108,9 @@ const Modal = ({tog}) => {
                         cursor: 'pointer',
                         display: 'block',
                         margin: '0 auto'
-                             }}  >Submit</button>
+                             }}  >
+                                {loading?<Example size={30} color={'#eee'}/>:'Submit'}
+                             </button>
     
         </form>
         </>,

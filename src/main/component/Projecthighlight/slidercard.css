@@ -5,7 +5,8 @@
     text-align: center;
 }
 .project-highlights-card img{
-    max-width: 100%;
+    max-width: 80%;
+    margin: 0 auto 20px auto;
     margin-bottom:  20px;
 }
 @media screen and (max-width:500px) {
