@@ -4,7 +4,7 @@ export const api = {
     delete:'https://lipapi.onrender.com/delete',
     update:'http://lipapi.onrender.com/update',
     projects:'https://lipapi.onrender.com/projects',
-    info:'https://lipapi.onrender.com/projects/info'
+    info:'https://lipapi.onrender.com/projects/info',
     get:'https://lipapi.onrender.com/',
     sendmail:'https://lipapi.onrender.com/sendEmail',
 }
