@@ -33,10 +33,10 @@ const Vendorlogin = () => {
     <form action=""  ref={formv}  onSubmit={FormData}   class="login1">
         <img src={login} class="login-bg" alt="login-img" />
         <p class="customer1">Vendor Registration</p>
-        <input type="text"   name="vname"   placeholder=" Name" class="input-fieldr" />
-        <input type="text"   name="vphone"   placeholder="Phone Number"  class="input-fieldr" />
-        <input type="email"   name="vemail"   placeholder=" Email"  class="input-fieldr" />
-        <input type="text"   name="vcity"    placeholder="City"  class="input-fieldr" />
+        <input type="text"   name="vname"   placeholder=" Name" class="input-fieldr" required/>
+        <input type="text"   name="vphone"   placeholder="Phone Number"  class="input-fieldr" required/>
+        <input type="email"   name="vemail"   placeholder=" Email"  class="input-fieldr" required/>
+        <input type="text"   name="vcity"    placeholder="City"  class="input-fieldr" required/>
         
       
 

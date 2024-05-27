@@ -549,10 +549,10 @@ console.log(formInfo);
             </div>
             <div class="select">
                <label class="radio-inline">
-               <input type="radio" name="registrationProof" value="GSTNumber"  />GST Number
+               <input type="radio" name="registrationProof" value="GSTNumber" required />GST Number
                </label>
                <label class="radio-inline">
-               <input type="radio" name="registrationProof" value="PANNumber" />PAN Number
+               <input type="radio" name="registrationProof" value="PANNumber" required/>PAN Number
                </label>
             </div>
          </div>
@@ -715,7 +715,7 @@ console.log(formInfo);
                <p className="pName">Contact Person*</p>
             </div>
             <div className="select">
-               <input class="input-fieldr" type="text" placeholder="Enter Contact Person" name="contactr" />
+               <input class="input-fieldr" type="text" placeholder="Enter Contact Person" name="contactr" required/>
             </div>
          </div>
          <div class="input-container1">
@@ -723,7 +723,7 @@ console.log(formInfo);
                <p className="pName">Contact Number (Mobile)*</p>
             </div>
             <div className="select">
-               <input class="input-fieldr" type="text" placeholder="Enter your Mobile Number" name="mobiler" />
+               <input class="input-fieldr" type="text" placeholder="Enter your Mobile Number" name="mobiler" required/>
             </div>
          </div>
          <div class="input-container1">
@@ -731,7 +731,7 @@ console.log(formInfo);
                <p className="pName">Email*</p>
             </div>
             <div className="select ">
-               <input class="input-fieldr" type="email" placeholder="Enter your Email" name="emailr" />
+               <input class="input-fieldr" type="email" placeholder="Enter your Email" name="emailr" required/>
             </div>
          </div>
          <div class="input-container1">
@@ -739,7 +739,7 @@ console.log(formInfo);
                <p className="pName">State*</p>
             </div>
             <div className="select">
-               <input class="input-fieldr" type="text" placeholder="Enter your State" name="stater" />
+               <input class="input-fieldr" type="text" placeholder="Enter your State" name="stater" required/>
             </div>
          </div>
          <div class="input-container1">
@@ -747,7 +747,7 @@ console.log(formInfo);
                <p  className="pName">City*</p>
             </div>
             <div className="select">
-               <input class="input-fieldr" type="text" placeholder="Enter your City" name="cityr" />
+               <input class="input-fieldr" type="text" placeholder="Enter your City" name="cityr" required/>
             </div>
          </div>
          <button type="submit" value="send" class="btn" style={style}>

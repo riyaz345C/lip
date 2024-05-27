@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import './popupform.css';
 import login from './lip-logo.png';
 import useFormPost from "../useFormPost";
@@ -27,9 +27,9 @@ const Popupform = () => {
     <span class="close-btn">&times;</span>
     <form class="login11" ref={formRef}>
       <p class=""><b> ENQUIRY NOW</b></p>
-      <input type="text" placeholder="Enter Your Name" name="popupName"class="mailid1" />
-      <input type="text" placeholder="Enter Your Email" name="popupEmail"class="passwd1" />
-      <input type="text" placeholder="Enter Your Phone Number" name="popupNumber"class="mailid1" />
+      <input type="text" placeholder="Enter Your Name" name="popupName"class="mailid1" required/>
+      <input type="text" placeholder="Enter Your Email" name="popupEmail"class="passwd1" required/>
+      <input type="text" placeholder="Enter Your Phone Number" name="popupNumber"class="mailid1" required/>
       <button type="submit" class="login-btn1">
       {loading?<Loader size={25} color={'#fff'}/>:<>
          {state.message&&'Retry'||'Submitted'}
