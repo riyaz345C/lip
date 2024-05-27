@@ -752,7 +752,7 @@ console.log(formInfo);
          </div>
          <button type="submit" value="send" class="btn" style={style}>
           {loading?<Loader size={25} color={'#fff'}/>:<>
-         {state.message&&'Retry'||'Submitted'}
+         {state.message&&'Retry'||'Submit'}
          </>}</button>
       </form>
    </div>

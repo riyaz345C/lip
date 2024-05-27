@@ -42,7 +42,7 @@ const Vendorlogin = () => {
 
             <button type="submit" value="send" class="login-btn">
             {loading?<Loader size={25} color={'#fff'}/>:<>
-         {state.message&&'Retry'||'Submitted'}
+         {state.message&&'Retry'||'Submit'}
          </>}
             </button>
            

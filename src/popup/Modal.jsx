@@ -96,9 +96,9 @@ const Modal = ({tog}) => {
                     }}
                 />
 
-            <input class="input-fieldr" type="text"  name='popupName'  placeholder="Enter your Name" /><br />
-            <input  class="input-fieldr" type="text"  name='popupPhone' placeholder="Enter your Phone Number" /><br />
-            <input class="input-fieldr" type="text"  name='popupEmail' placeholder="Enter your Email" /><br />
+            <input class="input-fieldr" type="text"  name='popupName'  placeholder="Enter your Name" required /><br />
+            <input  class="input-fieldr" type="text"  name='popupPhone' placeholder="Enter your Phone Number" required /><br />
+            <input class="input-fieldr" type="text"  name='popupEmail' placeholder="Enter your Email" required/><br />
             <button  type="submit" value="send" class="popupSubmit"   style={{
                         backgroundColor: 'green',
                         color: 'white',
